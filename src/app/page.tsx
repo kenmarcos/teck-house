@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { ModeToggle } from "@/components/ui/mode-toggle";
 import { SpeakerIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,8 +6,6 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <ModeToggle />
-
       <section className="mt-7">
         <Image
           src="/banner-home-01_desktop.png"
