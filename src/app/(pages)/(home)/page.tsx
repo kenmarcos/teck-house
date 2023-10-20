@@ -1,8 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { SpeakerIcon } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { ShowcaseSection } from "./components/showcase";
+import CategoriesSection from "./components/categories/categories-section";
 
 export default function Home() {
   return (
@@ -29,63 +27,7 @@ export default function Home() {
         />
       </section>
 
-      <section className="mt-7 md:px-5 lg:px-10">
-        <ul className="grid grid-cols-2 gap-x-4 gap-y-2 md:grid-cols-3 lg:grid-cols-6">
-          <li>
-            <Button asChild variant="outline" className="w-full gap-2">
-              <Link href="/">
-                <SpeakerIcon size={16} />
-                <span>Fones</span>
-              </Link>
-            </Button>
-          </li>
-
-          <li>
-            <Button asChild variant="outline" className="w-full gap-2">
-              <Link href="/">
-                <SpeakerIcon size={16} />
-                <span>Fones</span>
-              </Link>
-            </Button>
-          </li>
-
-          <li>
-            <Button asChild variant="outline" className="w-full gap-2">
-              <Link href="/">
-                <SpeakerIcon size={16} />
-                <span>Fones</span>
-              </Link>
-            </Button>
-          </li>
-
-          <li>
-            <Button asChild variant="outline" className="w-full gap-2">
-              <Link href="/">
-                <SpeakerIcon size={16} />
-                <span>Teclados</span>
-              </Link>
-            </Button>
-          </li>
-
-          <li>
-            <Button asChild variant="outline" className="w-full gap-2">
-              <Link href="/">
-                <SpeakerIcon size={16} />
-                <span>Fones</span>
-              </Link>
-            </Button>
-          </li>
-
-          <li>
-            <Button asChild variant="outline" className="w-full gap-2">
-              <Link href="/">
-                <SpeakerIcon size={16} />
-                <span>Mousepads</span>
-              </Link>
-            </Button>
-          </li>
-        </ul>
-      </section>
+      <CategoriesSection />
 
       <ShowcaseSection.Root>
         <ShowcaseSection.Title>Ofertas</ShowcaseSection.Title>
