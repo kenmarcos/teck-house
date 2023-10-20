@@ -2,29 +2,36 @@ import { MenuIcon, ShoppingCartIcon } from "lucide-react";
 import { Button } from "./button";
 import Link from "next/link";
 import MobileMenu from "./mobile-menu";
+import { ModeToggle } from "./mode-toggle";
 
 const Header = () => {
   return (
     <header className="border-b border-border">
       <div className="container flex items-center justify-between p-7">
-        <MobileMenu>
+        <div className="flex items-center gap-4">
+          <MobileMenu>
+            <Button size="icon" variant="outline">
+              <MenuIcon size={16} />
+            </Button>
+          </MobileMenu>
+
+          <Link href="/">
+            <h1 className="text-lg font-bold text-primary dark:text-foreground">
+              <span className="bg-logo-gradient bg-clip-text text-transparent">
+                TecK
+              </span>{" "}
+              House
+            </h1>
+          </Link>
+        </div>
+
+        <div className="flex items-center gap-1">
           <Button size="icon" variant="outline">
-            <MenuIcon size={16} />
+            <ShoppingCartIcon size={16} />
           </Button>
-        </MobileMenu>
 
-        <Link href="/">
-          <h1 className="text-lg font-bold text-primary dark:text-foreground">
-            <span className="bg-logo-gradient bg-clip-text text-transparent">
-              TecK
-            </span>{" "}
-            House
-          </h1>
-        </Link>
-
-        <Button size="icon" variant="outline">
-          <ShoppingCartIcon size={16} />
-        </Button>
+          <ModeToggle />
+        </div>
       </div>
     </header>
   );
