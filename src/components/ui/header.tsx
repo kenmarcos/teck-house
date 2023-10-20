@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header>
+    <header className="border-b border-border">
       <div className="container flex items-center justify-between p-7">
         <Button size="icon" variant="outline">
           <MenuIcon size={16} />
