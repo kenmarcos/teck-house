@@ -18,7 +18,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         "logo-gradient":
-          "linear-gradient(90deg, #5033C3 31.31%, #B9A8FF 54.21%)",
+          "linear-gradient(90deg, #5033C3 48.31%, #866FE2 60%, #B9A8FF 90.21%)",
       },
       colors: {
         border: "hsl(var(--border))",
