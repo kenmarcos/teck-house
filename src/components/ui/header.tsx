@@ -29,12 +29,19 @@ const Header = () => {
         </div>
 
         <div className="hidden h-6 items-center gap-5 lg:flex">
-          <Button variant="link">Início</Button>
-          <Separator orientation="vertical" />
-          <Button variant="link">Ofertas</Button>
-          <Separator orientation="vertical" />
+          <Button variant="link" className="dark:text-foreground">
+            Início
+          </Button>
 
-          <Button variant="link">Catálogo</Button>
+          <Separator orientation="vertical" />
+          <Button variant="link" className="dark:text-foreground">
+            Ofertas
+          </Button>
+
+          <Separator orientation="vertical" />
+          <Button variant="link" className="dark:text-foreground">
+            Catálogo
+          </Button>
         </div>
 
         <div className="flex items-center gap-1">
