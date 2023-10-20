@@ -1,14 +1,17 @@
 import { MenuIcon, ShoppingCartIcon } from "lucide-react";
 import { Button } from "./button";
 import Link from "next/link";
+import MobileMenu from "./mobile-menu";
 
 const Header = () => {
   return (
     <header className="border-b border-border">
       <div className="container flex items-center justify-between p-7">
-        <Button size="icon" variant="outline">
-          <MenuIcon size={16} />
-        </Button>
+        <MobileMenu>
+          <Button size="icon" variant="outline">
+            <MenuIcon size={16} />
+          </Button>
+        </MobileMenu>
 
         <Link href="/">
           <h1 className="text-lg font-bold text-primary dark:text-foreground">
