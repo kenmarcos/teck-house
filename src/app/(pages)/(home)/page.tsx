@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { SpeakerIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { ShowcaseSection } from "./components/showcase";
 
 export default function Home() {
   return (
@@ -85,6 +86,12 @@ export default function Home() {
           </li>
         </ul>
       </section>
+
+      <ShowcaseSection.Root>
+        <ShowcaseSection.Title>Ofertas</ShowcaseSection.Title>
+
+        <ShowcaseSection.Products />
+      </ShowcaseSection.Root>
     </div>
   );
 }
