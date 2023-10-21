@@ -1,10 +1,15 @@
 import Image from "next/image";
 
-const MainBanner = () => {
+interface MainBannerProps {
+  desktopBanner: string;
+  mobileBanner: string;
+}
+
+const MainBanner = ({ desktopBanner, mobileBanner }: MainBannerProps) => {
   return (
-    <section className="mt-7 md:mt-0">
+    <>
       <Image
-        src="/banner-home-01_desktop.png"
+        src={desktopBanner}
         alt="Até 55% de desconto esse mês!"
         width={0}
         height={0}
@@ -14,15 +19,15 @@ const MainBanner = () => {
       />
 
       <Image
-        src="/banner-home-01.png"
+        src={mobileBanner}
         alt="Até 55% de desconto esse mês!"
         width={0}
         height={0}
-        className="h-auto w-full md:hidden"
+        className="h-[150px] w-full rounded-lg object-cover md:hidden"
         sizes="100vw"
         priority
       />
-    </section>
+    </>
   );
 };
 
