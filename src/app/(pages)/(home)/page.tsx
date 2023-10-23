@@ -32,7 +32,7 @@ export default async function Home() {
   });
 
   return (
-    <div className="container mx-auto px-2 md:px-0">
+    <div className="container px-2 md:px-0">
       <MainBanner
         className="mt-7 md:mt-0"
         alt="Até 55% de desconto só esse mês"

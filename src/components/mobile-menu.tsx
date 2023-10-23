@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetHeader,
   SheetTitle,
@@ -13,6 +14,7 @@ import {
   LogInIcon,
   PercentIcon,
 } from "lucide-react";
+import Link from "next/link";
 
 interface MobileMenuProps {
   children: ReactNode;
@@ -41,9 +43,17 @@ const MobileMenu = ({ children }: MobileMenuProps) => {
             <PercentIcon size={16} /> Ofertas
           </Button>
 
-          <Button variant="ghost" className="w-full justify-start gap-2">
-            <ListOrderedIcon size={16} /> Catálogo
-          </Button>
+          <SheetClose asChild>
+            <Button
+              asChild
+              variant="ghost"
+              className="w-full justify-start gap-2"
+            >
+              <Link href="/categories">
+                <ListOrderedIcon size={16} /> Catálogo
+              </Link>
+            </Button>
+          </SheetClose>
         </div>
       </SheetContent>
     </Sheet>
