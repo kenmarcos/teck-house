@@ -17,7 +17,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           width={0}
           height={0}
           sizes="100vw"
-          className="h-auto w-2/3 "
+          className="aspect-square w-2/3 object-contain"
           alt={`Foto do produto ${name}`}
         />
       </div>
