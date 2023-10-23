@@ -1,19 +1,18 @@
 import { Showcase } from "./components/showcase/showcase";
 import Categories from "./components/categories/categories";
 import MainBanner from "./components/main-banner/main-banner";
-import Image from "next/image";
 import PromoBanner from "./components/promo-banner/promo-banner";
 
 export default function Home() {
   return (
     <div className="container mx-auto px-2 md:px-0">
       {/* MAIN BANNER */}
-      <section className="mt-7 md:mt-0">
-        <MainBanner
-          mobileBanner="/banner-home-01.png"
-          desktopBanner="/banner-home-01_desktop.png"
-        />
-      </section>
+      <MainBanner
+        className="mt-7 md:mt-0"
+        alt="Até 55% de desconto só esse mês"
+        mobileBanner="/banner-home-01.png"
+        desktopBanner="/banner-home-01_desktop.png"
+      />
 
       {/* CATEGORIES */}
       <section className="mt-7 md:px-5 lg:px-10">
