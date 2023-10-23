@@ -31,7 +31,7 @@ const MainBanner = ({
         <source media={desktopMedia} srcSet={desktop} />
         <img
           alt={alt}
-          className="w-full rounded-lg object-cover md:rounded-none"
+          className="h-[150px] w-full rounded-lg object-cover sm:h-auto md:rounded-none"
         />
       </picture>
     </section>
