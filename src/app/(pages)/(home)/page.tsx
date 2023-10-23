@@ -1,9 +1,34 @@
+import { prismaClient } from "@/lib/prisma";
 import { Showcase } from "../../../components/showcase/showcase";
 import Categories from "./components/categories/categories";
 import MainBanner from "./components/main-banner/main-banner";
 import PromoBanner from "./components/promo-banner/promo-banner";
 
-export default function Home() {
+export default async function Home() {
+  const offers = await prismaClient.product.findMany({
+    where: {
+      discountPercentage: {
+        gt: 0,
+      },
+    },
+  });
+
+  const keyboards = await prismaClient.product.findMany({
+    where: {
+      category: {
+        slug: "keyboards",
+      },
+    },
+  });
+
+  const mouses = await prismaClient.product.findMany({
+    where: {
+      category: {
+        slug: "mouses",
+      },
+    },
+  });
+
   return (
     <div className="container mx-auto px-2 md:px-0">
       <MainBanner
@@ -18,7 +43,7 @@ export default function Home() {
       <div className="mt-16 space-y-8 md:grid md:grid-cols-2 md:gap-x-7">
         <Showcase.Root className="space-y-5 md:order-1 md:col-span-2 md:px-5 lg:px-10">
           <Showcase.Title>Ofertas</Showcase.Title>
-          <Showcase.Products />
+          <Showcase.Products productList={offers} />
         </Showcase.Root>
 
         <PromoBanner
@@ -29,7 +54,7 @@ export default function Home() {
 
         <Showcase.Root className="space-y-5 md:order-5 md:col-span-2 md:px-5 lg:px-10">
           <Showcase.Title>Teclados</Showcase.Title>
-          <Showcase.Products />
+          <Showcase.Products productList={keyboards} />
         </Showcase.Root>
 
         <PromoBanner
@@ -46,7 +71,7 @@ export default function Home() {
 
         <Showcase.Root className="space-y-5 md:order-6 md:col-span-2 md:px-5 lg:px-10">
           <Showcase.Title>Mouses</Showcase.Title>
-          <Showcase.Products />
+          <Showcase.Products productList={mouses} />
         </Showcase.Root>
       </div>
     </div>
