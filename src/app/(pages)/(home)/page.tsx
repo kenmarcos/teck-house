@@ -15,9 +15,7 @@ export default function Home() {
       />
 
       {/* CATEGORIES */}
-      <section className="mt-7 md:px-5 lg:px-10">
-        <Categories />
-      </section>
+      <Categories className="mt-7 md:px-5 lg:px-10" />
 
       <div className="mt-16 space-y-8 md:grid md:grid-cols-2 md:gap-x-7">
         {/* SHOWCASE */}
