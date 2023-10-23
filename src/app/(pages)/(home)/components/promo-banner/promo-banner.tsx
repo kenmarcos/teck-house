@@ -1,22 +1,23 @@
 import Image from "next/image";
+import { ComponentProps } from "react";
 
-interface PromoBannerProps {
-  banner: string;
+interface PromoBannerProps extends ComponentProps<"section"> {
+  src: string;
   alt: string;
 }
 
-const PromoBanner = ({ banner, alt }: PromoBannerProps) => {
+const PromoBanner = ({ src, alt, ...rest }: PromoBannerProps) => {
   return (
-    <>
+    <section {...rest}>
       <Image
-        src={banner}
+        src={src}
         alt={alt}
         width={0}
         height={0}
         sizes="100vw"
         className="h-[150px] w-full rounded-lg object-cover"
       />
-    </>
+    </section>
   );
 };
 

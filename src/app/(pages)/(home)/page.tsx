@@ -21,36 +21,30 @@ export default function Home() {
           <Showcase.Products />
         </Showcase.Root>
 
-        {/* PROMO BANNER */}
-        <section className="md:order-3 md:pl-5 lg:pl-10">
-          <PromoBanner
-            banner="/banner-home-02.png"
-            alt="Até 20% de desconto em fones"
-          />
-        </section>
+        <PromoBanner
+          className="md:order-3 md:pl-5 lg:pl-10"
+          src="/banner-home-02.png"
+          alt="Até 20% de desconto em fones"
+        />
 
-        <Showcase.Root className="space-y-5 md:order-1 md:col-span-2 md:px-5 lg:px-10">
+        <Showcase.Root className="space-y-5 md:order-5 md:col-span-2 md:px-5 lg:px-10">
           <Showcase.Title>Teclados</Showcase.Title>
           <Showcase.Products />
         </Showcase.Root>
 
-        {/* PROMO BANNER */}
-        <section className="md:order-4 md:pr-5 lg:pr-10">
-          <PromoBanner
-            banner="/banner-home-03.png"
-            alt="Até 55% de desconto em mouses"
-          />
-        </section>
+        <PromoBanner
+          className="md:order-4 md:pr-5 lg:pr-10"
+          src="/banner-home-03.png"
+          alt="Até 55% de desconto em mouses"
+        />
 
-        {/* PROMO BANNER */}
-        <section className="hidden md:order-6 md:col-span-2 md:block md:px-5 lg:px-10 ">
-          <PromoBanner
-            banner="/banner-home-04.png"
-            alt="Frete grátis para todo Brasil"
-          />
-        </section>
+        <PromoBanner
+          className="hidden md:order-6 md:col-span-2 md:block md:px-5 lg:px-10"
+          src="/banner-home-04.png"
+          alt="Frete grátis para todo Brasil"
+        />
 
-        <Showcase.Root className="space-y-5 md:order-1 md:col-span-2 md:px-5 lg:px-10">
+        <Showcase.Root className="space-y-5 md:order-6 md:col-span-2 md:px-5 lg:px-10">
           <Showcase.Title>Mouses</Showcase.Title>
           <Showcase.Products />
         </Showcase.Root>
