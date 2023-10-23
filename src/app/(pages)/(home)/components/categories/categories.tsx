@@ -1,13 +1,20 @@
 import { ComponentProps } from "react";
 import CategoryItem from "../category-item/category-item";
+import { Category } from "@prisma/client";
 
-const Categories = (props: ComponentProps<"section">) => {
+interface CategoriesProps extends ComponentProps<"section"> {
+  categories: Category[];
+}
+
+const Categories = ({ categories, ...rest }: CategoriesProps) => {
   return (
-    <section {...props}>
+    <section {...rest}>
       <ul className="grid grid-cols-2 gap-x-4 gap-y-2 md:grid-cols-3 lg:grid-cols-6">
-        <li>
-          <CategoryItem />
-        </li>
+        {categories.map((category) => (
+          <li key={category.id}>
+            <CategoryItem category={category} />
+          </li>
+        ))}
       </ul>
     </section>
   );

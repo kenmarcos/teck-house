@@ -5,6 +5,8 @@ import MainBanner from "./components/main-banner/main-banner";
 import PromoBanner from "./components/promo-banner/promo-banner";
 
 export default async function Home() {
+  const categories = await prismaClient.category.findMany({});
+
   const offers = await prismaClient.product.findMany({
     where: {
       discountPercentage: {
@@ -38,7 +40,7 @@ export default async function Home() {
         desktopBanner="/banner-home-01_desktop.png"
       />
 
-      <Categories className="mt-7 md:px-5 lg:px-10" />
+      <Categories className="mt-7 md:px-5 lg:px-10" categories={categories} />
 
       <div className="mt-16 space-y-8 md:grid md:grid-cols-2 md:gap-x-7">
         <Showcase.Root className="space-y-5 md:order-1 md:col-span-2 md:px-5 lg:px-10">
