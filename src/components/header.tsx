@@ -39,8 +39,8 @@ const Header = () => {
           </Button>
 
           <Separator orientation="vertical" />
-          <Button variant="link" className="dark:text-foreground">
-            Catálogo
+          <Button asChild variant="link" className="dark:text-foreground">
+            <Link href="/categories">Catálogo</Link>
           </Button>
         </div>
 
