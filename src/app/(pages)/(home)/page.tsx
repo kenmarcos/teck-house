@@ -1,4 +1,4 @@
-import { Showcase } from "./components/showcase/showcase";
+import { Showcase } from "../../../components/showcase/showcase";
 import Categories from "./components/categories/categories";
 import MainBanner from "./components/main-banner/main-banner";
 import PromoBanner from "./components/promo-banner/promo-banner";

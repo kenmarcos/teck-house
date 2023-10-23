@@ -1,8 +1,8 @@
 import { MenuIcon, ShoppingCartIcon, User2Icon } from "lucide-react";
 import { Button } from "./button";
 import Link from "next/link";
-import MobileMenu from "./mobile-menu";
-import { ModeToggle } from "./mode-toggle";
+import MobileMenu from "../mobile-menu";
+import { ModeToggle } from "../mode-toggle";
 import { Separator } from "./separator";
 
 const Header = () => {
