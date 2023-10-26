@@ -10,7 +10,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
   const { name, imageUrls, basePrice } = product;
 
   return (
-    <div className="w-[150px] space-y-4 md:w-[190px]">
+    <div className="w-[150px] space-y-2 md:w-[190px]">
       <div className="flex aspect-square items-center justify-center rounded-lg bg-accent">
         <Image
           src={imageUrls[0]}
