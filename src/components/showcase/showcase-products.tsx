@@ -11,7 +11,7 @@ const ShowcaseProducts = ({ productList, ...rest }: ShowcaseProductsProps) => {
   return (
     <ul {...rest}>
       {productList.map((product) => (
-        <li key={product.id}>
+        <li key={product.id} className="first:ml-2">
           <Link href={`/products/${product.slug}`}>
             <ProductCard product={product} />
           </Link>
