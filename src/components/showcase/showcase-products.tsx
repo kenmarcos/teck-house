@@ -1,5 +1,6 @@
 import ProductCard from "@/components/product-card";
 import { Product } from "@prisma/client";
+import Link from "next/link";
 import { ComponentProps } from "react";
 
 interface ShowcaseProductsProps extends ComponentProps<"ul"> {
@@ -11,7 +12,9 @@ const ShowcaseProducts = ({ productList, ...rest }: ShowcaseProductsProps) => {
     <ul {...rest}>
       {productList.map((product) => (
         <li key={product.id}>
-          <ProductCard product={product} />
+          <Link href={`/products/${product.slug}`}>
+            <ProductCard product={product} />
+          </Link>
         </li>
       ))}
     </ul>
