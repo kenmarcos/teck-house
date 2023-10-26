@@ -1,5 +1,6 @@
 import { prismaClient } from "@/lib/prisma";
 import ProductImages from "./components/product-images";
+import ProductInfo from "./components/product-info";
 
 interface ProductPageProps {
   params: {
@@ -21,6 +22,8 @@ const ProductPage = async ({ params: { slug } }: ProductPageProps) => {
   return (
     <>
       <ProductImages imageUrls={product?.imageUrls} name={product?.name} />
+
+      <ProductInfo className="px-2" />
     </>
   );
 };
