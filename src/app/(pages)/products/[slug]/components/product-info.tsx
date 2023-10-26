@@ -2,12 +2,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
 import { ComponentProps } from "react";
 
-interface ProductImagesProps extends ComponentProps<"section"> {}
-
-const ProductInfo = ({ ...rest }: ProductImagesProps) => {
+const ProductInfo = ({ ...rest }: ComponentProps<"section">) => {
   return (
     <section {...rest}>
-      <div className="space-y-6">
+      <div className="space-y-6 md:px-7 md:py-12 ">
         <h2 className="text-xl">Logitech MX Master 3s</h2>
 
         <div>
@@ -37,7 +35,15 @@ const ProductInfo = ({ ...rest }: ProductImagesProps) => {
             Lorem ipsum dolor sit amet consectetur. Lacinia venenatis nunc nulla
             enim nulla vel pulvinar metus. Lorem ipsum dolor sit amet
             consectetur. Lorem ipsum dolor sit amet consectetur. Lacinia
-            venenatis nunc nulla enim nulla vel pulvinar metus.
+            venenatis nunc nulla enim nulla vel pulvinar metus. Lorem ipsum
+            dolor sit amet consectetur. Lacinia venenatis nunc nulla enim nulla
+            vel pulvinar metus. Lorem ipsum dolor sit amet consectetur. Lorem
+            Lorem ipsum dolor sit amet consectetur. Lacinia venenatis nunc nulla
+            enim nulla vel pulvinar metus. Lorem ipsum dolor sit amet
+            consectetur. Lorem ipsum dolor sit amet consectetur. Lacinia
+            venenatis nunc nulla enim nulla vel pulvinar metus. Lorem ipsum
+            dolor sit amet consectetur. Lacinia venenatis nunc nulla enim nulla
+            vel pulvinar m
           </p>
         </div>
 

@@ -3,10 +3,12 @@
 import { Button } from "@/components/ui/button";
 import { Product } from "@prisma/client";
 import Image from "next/image";
-import { useState } from "react";
+import { ComponentProps, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
-type ProductImagesProps = Pick<Product, "imageUrls" | "name">;
+interface ProductImagesProps
+  extends ComponentProps<"section">,
+    Pick<Product, "imageUrls" | "name"> {}
 
 enum Images {
   FIRST,
@@ -15,19 +17,19 @@ enum Images {
   FOURTH,
 }
 
-const ProductImages = ({ imageUrls, name }: ProductImagesProps) => {
+const ProductImages = ({ imageUrls, name, ...rest }: ProductImagesProps) => {
   const [selectedImage, setSelectedImage] = useState(imageUrls[Images.FIRST]);
 
   const buttonClasses = (image: string) =>
     twMerge(
-      "aspect-square h-16 px-2",
+      "aspect-square h-16 px-2 md:bg-background",
       selectedImage === image ? "border border-primary" : "border-transparent",
     );
 
   return (
-    <section>
-      <div className="space-y-7">
-        <div className="flex h-96 items-center justify-center bg-muted">
+    <section {...rest}>
+      <div className="space-y-7 md:sticky md:top-7 md:h-3/4">
+        <div className="flex h-96 items-center justify-center bg-muted md:h-full md:max-h-[800px] md:rounded-lg">
           <Image
             src={selectedImage}
             alt={name}
@@ -38,7 +40,7 @@ const ProductImages = ({ imageUrls, name }: ProductImagesProps) => {
           />
         </div>
 
-        <div className="flex justify-center gap-4 px-5 sm:justify-start">
+        <div className="md: flex justify-center gap-4 px-2 sm:justify-start md:absolute md:top-0 md:flex-col">
           {imageUrls.map((imageUrl, index) => (
             <Button
               key={index}
