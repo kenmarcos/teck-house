@@ -45,7 +45,10 @@ export default async function Home() {
       <div className="mt-16 space-y-8 md:grid md:grid-cols-2 md:gap-x-7">
         <Showcase.Root className="space-y-5 md:order-1 md:col-span-2 md:px-5 lg:px-10">
           <Showcase.Title>Ofertas</Showcase.Title>
-          <Showcase.Products productList={offers} />
+          <Showcase.Products
+            productList={offers}
+            className="flex w-full flex-nowrap justify-between gap-4 overflow-x-auto pb-6"
+          />
         </Showcase.Root>
 
         <PromoBanner
@@ -56,7 +59,10 @@ export default async function Home() {
 
         <Showcase.Root className="space-y-5 md:order-5 md:col-span-2 md:px-5 lg:px-10">
           <Showcase.Title>Teclados</Showcase.Title>
-          <Showcase.Products productList={keyboards} />
+          <Showcase.Products
+            productList={keyboards}
+            className="flex w-full flex-nowrap justify-between gap-4 overflow-x-auto pb-6"
+          />
         </Showcase.Root>
 
         <PromoBanner
@@ -73,7 +79,10 @@ export default async function Home() {
 
         <Showcase.Root className="space-y-5 md:order-6 md:col-span-2 md:px-5 lg:px-10">
           <Showcase.Title>Mouses</Showcase.Title>
-          <Showcase.Products productList={mouses} />
+          <Showcase.Products
+            productList={mouses}
+            className="flex w-full flex-nowrap justify-between gap-4 overflow-x-auto pb-6"
+          />
         </Showcase.Root>
       </div>
     </div>
