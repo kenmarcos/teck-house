@@ -1,15 +1,18 @@
 import Counter from "@/components/counter";
+import DiscountBadge from "@/components/discount-badge";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { formatPrice } from "@/utils/format";
-import { Product } from "@prisma/client";
+import { ProductWithTotalPrice } from "@/utils/product";
+import { ArrowDownIcon } from "lucide-react";
 import { ComponentProps } from "react";
 
 interface ProductInfoProps extends ComponentProps<"section"> {
-  product: Product;
+  product: ProductWithTotalPrice;
 }
 
 const ProductInfo = ({ product, ...rest }: ProductInfoProps) => {
-  const { name, basePrice, description } = product;
+  const { name, basePrice, totalPrice, description } = product;
 
   return (
     <section {...rest}>
@@ -24,7 +27,15 @@ const ProductInfo = ({ product, ...rest }: ProductInfoProps) => {
             </span>
           </p>
 
-          <p className="text-2xl font-bold">Por: R$ 467,93</p>
+          <div className="flex items-center gap-2">
+            <p className="text-2xl font-bold">
+              Por: {formatPrice(Number(totalPrice))}
+            </p>
+
+            <DiscountBadge className="text-xl" iconSize={24}>
+              {product.discountPercentage}
+            </DiscountBadge>
+          </div>
         </div>
 
         <Counter />
