@@ -1,17 +1,18 @@
 import { formatPrice } from "@/utils/format";
-import { Product } from "@prisma/client";
 import Image from "next/image";
+import DiscountBadge from "./discount-badge";
+import { ProductWithTotalPrice } from "@/utils/product";
 
 interface ProductCardProps {
-  product: Product;
+  product: ProductWithTotalPrice;
 }
 
 const ProductCard = ({ product }: ProductCardProps) => {
-  const { name, imageUrls, basePrice } = product;
+  const { name, imageUrls, basePrice, discountPercentage } = product;
 
   return (
     <div className="w-[150px] space-y-2 md:w-[190px]">
-      <div className="flex aspect-square items-center justify-center rounded-lg bg-accent">
+      <div className="relative flex aspect-square items-center justify-center rounded-lg bg-accent">
         <Image
           src={imageUrls[0]}
           width={0}
@@ -20,6 +21,12 @@ const ProductCard = ({ product }: ProductCardProps) => {
           className="aspect-square w-2/3 object-contain"
           alt={`Foto do produto ${name}`}
         />
+
+        {discountPercentage > 0 && (
+          <DiscountBadge className="absolute left-2 top-2">
+            {discountPercentage}
+          </DiscountBadge>
+        )}
       </div>
 
       <div className="space-y-2">

@@ -1,10 +1,14 @@
 import ProductCard from "@/components/product-card";
+import {
+  ProductWithTotalPrice,
+  computeProductTotalPrice,
+} from "@/utils/product";
 import { Product } from "@prisma/client";
 import Link from "next/link";
 import { ComponentProps } from "react";
 
 interface ShowcaseProductsProps extends ComponentProps<"ul"> {
-  productList: Product[];
+  productList: Product[] | ProductWithTotalPrice[];
 }
 
 const ShowcaseProducts = ({ productList, ...rest }: ShowcaseProductsProps) => {
@@ -13,7 +17,7 @@ const ShowcaseProducts = ({ productList, ...rest }: ShowcaseProductsProps) => {
       {productList.map((product) => (
         <li key={product.id} className="first:ml-2">
           <Link href={`/products/${product.slug}`}>
-            <ProductCard product={product} />
+            <ProductCard product={computeProductTotalPrice(product)} />
           </Link>
         </li>
       ))}
