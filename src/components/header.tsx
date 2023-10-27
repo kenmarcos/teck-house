@@ -29,8 +29,8 @@ const Header = () => {
         </div>
 
         <div className="hidden h-6 items-center gap-5 lg:flex">
-          <Button variant="link" className="dark:text-foreground">
-            Início
+          <Button asChild variant="link" className="dark:text-foreground">
+            <Link href="/">Início</Link>
           </Button>
 
           <Separator orientation="vertical" />

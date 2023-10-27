@@ -35,9 +35,17 @@ const MobileMenu = ({ children }: MobileMenuProps) => {
             <LogInIcon size={16} /> Fazer Login
           </Button>
 
-          <Button variant="ghost" className="w-full justify-start gap-2">
-            <HomeIcon size={16} /> Início
-          </Button>
+          <SheetClose asChild>
+            <Button
+              asChild
+              variant="ghost"
+              className="w-full justify-start gap-2"
+            >
+              <Link href="/">
+                <HomeIcon size={16} /> Início
+              </Link>
+            </Button>
+          </SheetClose>
 
           <Button variant="ghost" className="w-full justify-start gap-2">
             <PercentIcon size={16} /> Ofertas
