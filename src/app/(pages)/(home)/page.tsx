@@ -47,7 +47,7 @@ export default async function Home() {
           <Showcase.Title>Ofertas</Showcase.Title>
           <Showcase.Products
             productList={offers}
-            className="flex w-full flex-nowrap justify-between gap-4 overflow-x-auto pb-6"
+            className="flex w-full flex-nowrap gap-4 overflow-x-auto pb-6"
           />
         </Showcase.Root>
 
@@ -61,7 +61,7 @@ export default async function Home() {
           <Showcase.Title>Teclados</Showcase.Title>
           <Showcase.Products
             productList={keyboards}
-            className="flex w-full flex-nowrap justify-between gap-4 overflow-x-auto pb-6"
+            className="flex w-full flex-nowrap gap-4 overflow-x-auto pb-6"
           />
         </Showcase.Root>
 
@@ -81,7 +81,7 @@ export default async function Home() {
           <Showcase.Title>Mouses</Showcase.Title>
           <Showcase.Products
             productList={mouses}
-            className="flex w-full flex-nowrap justify-between gap-4 overflow-x-auto pb-6"
+            className="flex w-full flex-nowrap gap-4 overflow-x-auto pb-6"
           />
         </Showcase.Root>
       </div>
