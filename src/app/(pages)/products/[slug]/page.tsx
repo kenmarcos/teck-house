@@ -50,7 +50,9 @@ const ProductPage = async ({ params: { slug } }: ProductPageProps) => {
       </section>
 
       <Showcase.Root className="space-y-5 md:order-5 md:col-span-2 md:px-5 lg:px-10">
-        <Showcase.Title className="px-2">Produtos recomendados</Showcase.Title>
+        <Showcase.Title className="px-2 md:px-0">
+          Produtos recomendados
+        </Showcase.Title>
         <Showcase.Products
           productList={product.category.products}
           className="flex w-full flex-nowrap gap-4 overflow-x-auto pb-6"
