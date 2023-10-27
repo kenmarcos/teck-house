@@ -15,7 +15,7 @@ const ShowcaseProducts = ({ productList, ...rest }: ShowcaseProductsProps) => {
   return (
     <ul {...rest}>
       {productList.map((product) => (
-        <li key={product.id} className="first:ml-2">
+        <li key={product.id} className="first:ml-2 md:first:ml-0">
           <Link href={`/products/${product.slug}`}>
             <ProductCard product={computeProductTotalPrice(product)} />
           </Link>
