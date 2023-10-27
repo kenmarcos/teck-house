@@ -28,7 +28,7 @@ const ProductImages = ({ imageUrls, name, ...rest }: ProductImagesProps) => {
 
   return (
     <section {...rest}>
-      <div className="space-y-7 md:sticky md:top-7 md:h-3/4">
+      <div className="space-y-7 md:sticky md:top-7 md:h-3/4 md:space-y-0">
         <div className="flex h-96 items-center justify-center bg-muted md:h-full md:max-h-[800px] md:rounded-lg">
           <Image
             src={selectedImage}
@@ -40,7 +40,7 @@ const ProductImages = ({ imageUrls, name, ...rest }: ProductImagesProps) => {
           />
         </div>
 
-        <div className="md: flex justify-center gap-4 px-2 sm:justify-start md:absolute md:top-0 md:flex-col">
+        <div className="flex justify-center gap-4 px-2 md:absolute md:bottom-4 md:w-full lg:top-4 lg:w-auto lg:flex-col lg:justify-start">
           {imageUrls.map((imageUrl, index) => (
             <Button
               key={index}

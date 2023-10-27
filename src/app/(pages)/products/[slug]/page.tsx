@@ -42,7 +42,10 @@ const ProductPage = async ({ params: { slug } }: ProductPageProps) => {
           className="lg:col-span-3"
         />
 
-        <ProductInfo className="px-2 md:rounded-lg md:bg-muted lg:col-span-2" />
+        <ProductInfo
+          className="px-2 md:rounded-lg md:bg-muted lg:col-span-2"
+          product={product}
+        />
       </section>
 
       <Showcase.Root className="space-y-5 md:order-5 md:col-span-2 md:px-5 lg:px-10">
