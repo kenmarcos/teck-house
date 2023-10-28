@@ -1,20 +1,19 @@
+"use client";
+
 import { ReactNode } from "react";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "./ui/sheet";
+import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "./ui/sheet";
 import Title from "./title";
 import { ShoppingCartIcon } from "lucide-react";
 import CartItemCard from "./cart-item-card";
+import { useCartStore } from "@/store/cart";
 
 interface CartProps {
   children: ReactNode;
 }
 
 const Cart = ({ children }: CartProps) => {
+  const cartProducts = useCartStore((state) => state.products);
+
   return (
     <Sheet>
       <SheetTrigger asChild>{children}</SheetTrigger>
@@ -29,17 +28,11 @@ const Cart = ({ children }: CartProps) => {
 
         <div>
           <ul className="space-y-5">
-            <li>
-              <CartItemCard />
-            </li>
-
-            <li>
-              <CartItemCard />
-            </li>
-
-            <li>
-              <CartItemCard />
-            </li>
+            {cartProducts.map((product) => (
+              <li key={product.id}>
+                <CartItemCard product={product} />
+              </li>
+            ))}
           </ul>
         </div>
       </SheetContent>

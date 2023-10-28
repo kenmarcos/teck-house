@@ -45,7 +45,9 @@ const ProductPage = async ({ params: { slug } }: ProductPageProps) => {
 
         <ProductInfo
           className="px-2 md:rounded-lg md:bg-muted lg:col-span-2"
-          product={computeProductTotalPrice(product)}
+          product={JSON.parse(
+            JSON.stringify(computeProductTotalPrice(product)),
+          )}
         />
       </section>
 
