@@ -15,7 +15,8 @@ interface ProductInfoProps extends ComponentProps<"section"> {
 const ProductInfo = ({ product, ...rest }: ProductInfoProps) => {
   const [quantity, setQuantity] = useState(1);
 
-  const { name, basePrice, totalPrice, description } = product;
+  const { name, basePrice, totalPrice, discountPercentage, description } =
+    product;
 
   const addProductToCart = useCartStore((state) => state.addProductToCart);
 
@@ -37,21 +38,27 @@ const ProductInfo = ({ product, ...rest }: ProductInfoProps) => {
         <h2 className="text-xl">{name}</h2>
 
         <div>
-          <p className="text-muted-foreground">
-            De:{" "}
-            <span className="line-through">
-              {formatPrice(Number(basePrice))}
-            </span>
-          </p>
+          {discountPercentage > 0 && (
+            <p className="text-muted-foreground">
+              De:{" "}
+              <span className="line-through">
+                {formatPrice(Number(basePrice))}
+              </span>
+            </p>
+          )}
 
           <div className="flex items-center gap-2">
             <p className="text-2xl font-bold">
-              Por: {formatPrice(Number(totalPrice))}
+              {discountPercentage > 0
+                ? `Por: ${formatPrice(totalPrice)}`
+                : formatPrice(totalPrice)}
             </p>
 
-            <DiscountBadge className="text-xl" iconSize={24}>
-              {product.discountPercentage}
-            </DiscountBadge>
+            {discountPercentage > 0 && (
+              <DiscountBadge className="text-xl" iconSize={24}>
+                {discountPercentage}
+              </DiscountBadge>
+            )}
           </div>
         </div>
 
