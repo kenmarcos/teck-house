@@ -7,19 +7,14 @@ export interface CartItem extends ProductWithTotalPrice {
 
 interface CartStore {
   products: CartItem[];
-  subtotal: number;
-  total: number;
-  totalDiscount: number;
   addProductToCart: (product: CartItem) => void;
+  removeProductFromCart: (productId: string) => void;
   increaseProductQuantity: (productId: string) => void;
   decreaseProductQuantity: (productId: string) => void;
 }
 
 export const useCartStore = create<CartStore>((set) => ({
   products: [],
-  subtotal: 0,
-  total: 0,
-  totalDiscount: 0,
   addProductToCart: (product: CartItem) =>
     set((state) => {
       const productIsAlreadyOnCart = state.products.some(
@@ -33,11 +28,21 @@ export const useCartStore = create<CartStore>((set) => ({
 
         state.products[productIndex].quantity += product.quantity;
 
+        localStorage.setItem(
+          "@teck-house:cart",
+          JSON.stringify(state.products),
+        );
+
         return {
           ...state,
           products: [...state.products],
         };
       }
+
+      localStorage.setItem(
+        "@teck-house:cart",
+        JSON.stringify([...state.products, product]),
+      );
 
       return {
         ...state,
@@ -45,29 +50,60 @@ export const useCartStore = create<CartStore>((set) => ({
       };
     }),
 
-  increaseProductQuantity: (productId: string) =>
+  removeProductFromCart: (productId: string) => {
     set((state) => {
-      const productIndex = state.products.findIndex(
-        (product) => product.id === productId,
+      const updatedProducts = state.products.filter(
+        (product) => product.id !== productId,
       );
 
-      state.products[productIndex].quantity += 1;
+      localStorage.setItem("@teck-house:cart", JSON.stringify(updatedProducts));
 
       return {
         ...state,
+        products: updatedProducts,
+      };
+    });
+  },
+
+  increaseProductQuantity: (productId: string) =>
+    set((state) => {
+      const updatedProducts = state.products.map((product) => {
+        if (product.id === productId) {
+          return {
+            ...product,
+            quantity: product.quantity + 1,
+          };
+        }
+
+        return product;
+      });
+
+      localStorage.setItem("@teck-house:cart", JSON.stringify(updatedProducts));
+
+      return {
+        ...state,
+        products: updatedProducts,
       };
     }),
 
   decreaseProductQuantity: (productId: string) =>
     set((state) => {
-      const productIndex = state.products.findIndex(
-        (product) => product.id === productId,
-      );
+      const updatedProducts = state.products.map((product) => {
+        if (product.id === productId) {
+          return {
+            ...product,
+            quantity: product.quantity - 1,
+          };
+        }
 
-      state.products[productIndex].quantity -= 1;
+        return product;
+      });
+
+      localStorage.setItem("@teck-house:cart", JSON.stringify(updatedProducts));
 
       return {
         ...state,
+        products: updatedProducts,
       };
     }),
 }));

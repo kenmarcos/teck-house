@@ -18,12 +18,15 @@ const CartItemCard = ({ product }: CartItemCardProps) => {
   const increaseProductQuantity = useCartStore(
     (state) => state.increaseProductQuantity,
   );
-
   const decreaseProductQuantity = useCartStore(
     (state) => state.decreaseProductQuantity,
   );
+  const removeProductFromCart = useCartStore(
+    (state) => state.removeProductFromCart,
+  );
 
-  const { name, imageUrls, basePrice, totalPrice } = product;
+  const { name, imageUrls, basePrice, totalPrice, discountPercentage } =
+    product;
 
   const increaseQuantity = () => {
     setQuantity((currentState) => currentState + 1);
@@ -35,6 +38,10 @@ const CartItemCard = ({ product }: CartItemCardProps) => {
     setQuantity((currentState) => currentState - 1);
 
     decreaseProductQuantity(product.id);
+  };
+
+  const handleRemoveProductFromCart = () => {
+    removeProductFromCart(product.id);
   };
 
   return (
@@ -60,9 +67,12 @@ const CartItemCard = ({ product }: CartItemCardProps) => {
             <p className="text-sm font-bold">
               {formatPrice(Number(totalPrice))}
             </p>
-            <p className="text-xs text-muted-foreground line-through">
-              {formatPrice(Number(basePrice))}
-            </p>
+
+            {discountPercentage > 0 && (
+              <p className="text-xs text-muted-foreground line-through">
+                {formatPrice(Number(basePrice))}
+              </p>
+            )}
           </div>
 
           <Counter
@@ -75,7 +85,11 @@ const CartItemCard = ({ product }: CartItemCardProps) => {
       </div>
 
       <div>
-        <Button size="icon" variant="outline" className="">
+        <Button
+          size="icon"
+          variant="outline"
+          onClick={handleRemoveProductFromCart}
+        >
           <Trash2Icon size={16} />
         </Button>
       </div>

@@ -1,11 +1,15 @@
 "use client";
 
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useMemo } from "react";
 import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "./ui/sheet";
 import Title from "./title";
 import { ShoppingCartIcon } from "lucide-react";
 import CartItemCard from "./cart-item-card";
 import { useCartStore } from "@/store/cart";
+import { Button } from "./ui/button";
+import CartInfo from "./cart-info";
+import { formatPrice } from "@/utils/format";
+import { ScrollArea } from "./ui/scroll-area";
 
 interface CartProps {
   children: ReactNode;
@@ -13,6 +17,32 @@ interface CartProps {
 
 const Cart = ({ children }: CartProps) => {
   const cartProducts = useCartStore((state) => state.products);
+
+  const subtotal = useMemo(() => {
+    return cartProducts.reduce(
+      (acc, product) => acc + Number(product.basePrice) * product.quantity,
+      0,
+    );
+  }, [cartProducts]);
+
+  const total = useMemo(() => {
+    return cartProducts.reduce(
+      (acc, product) => acc + product.totalPrice * product.quantity,
+      0,
+    );
+  }, [cartProducts]);
+
+  const totalDiscount = useMemo(() => {
+    return subtotal - total;
+  }, [subtotal, total]);
+
+  useEffect(() => {
+    const cart = localStorage.getItem("@teck-house:cart");
+
+    if (cart) {
+      useCartStore.setState({ products: JSON.parse(cart) });
+    }
+  }, []);
 
   return (
     <Sheet>
@@ -26,14 +56,37 @@ const Cart = ({ children }: CartProps) => {
           </Title>
         </SheetHeader>
 
-        <div>
-          <ul className="space-y-5">
-            {cartProducts.map((product) => (
-              <li key={product.id}>
-                <CartItemCard product={product} />
-              </li>
-            ))}
-          </ul>
+        <div className="flex h-full flex-col space-y-6 py-7">
+          <ScrollArea className="h-full">
+            <ul className=" space-y-5">
+              {cartProducts.map((product) => (
+                <li key={product.id} className="pr-3">
+                  <CartItemCard product={product} />
+                </li>
+              ))}
+            </ul>
+          </ScrollArea>
+
+          <div>
+            <CartInfo text="Subtotal" data={formatPrice(subtotal)} />
+
+            <CartInfo text="Entrega" data="GRÁTIS" />
+
+            {totalDiscount > 0 && (
+              <CartInfo
+                text="Descontos"
+                data={`- ${formatPrice(totalDiscount)}`}
+              />
+            )}
+
+            <CartInfo
+              className="font-bold"
+              text="Total"
+              data={formatPrice(total)}
+            />
+          </div>
+
+          <Button className="w-full">Finalizar Compra</Button>
         </div>
       </SheetContent>
     </Sheet>
