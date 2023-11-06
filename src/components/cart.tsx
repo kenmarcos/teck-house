@@ -11,6 +11,8 @@ import CartInfo from "./cart-info";
 import { formatPrice } from "@/utils/format";
 import { ScrollArea } from "./ui/scroll-area";
 import { Badge } from "./ui/badge";
+import { createCheckout } from "@/actions/checkout";
+import { loadStripe } from "@stripe/stripe-js";
 
 const Cart = () => {
   const cartProducts = useCartStore((state) => state.products);
@@ -32,6 +34,18 @@ const Cart = () => {
   const totalDiscount = useMemo(() => {
     return subtotal - total;
   }, [subtotal, total]);
+
+  const handleCheckout = async () => {
+    const checkout = await createCheckout(cartProducts);
+
+    const stripe = await loadStripe(
+      process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY,
+    );
+
+    stripe?.redirectToCheckout({
+      sessionId: checkout.id,
+    });
+  };
 
   useEffect(() => {
     const cart = localStorage.getItem("@teck-house:cart");
@@ -108,7 +122,10 @@ const Cart = () => {
                 />
               </div>
 
-              <Button className="w-full font-bold uppercase">
+              <Button
+                className="w-full font-bold uppercase"
+                onClick={handleCheckout}
+              >
                 Finalizar Compra
               </Button>
             </>
