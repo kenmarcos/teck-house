@@ -108,7 +108,9 @@ const Cart = () => {
                 />
               </div>
 
-              <Button className="w-full">Finalizar Compra</Button>
+              <Button className="w-full font-bold uppercase">
+                Finalizar Compra
+              </Button>
             </>
           )}
         </div>
