@@ -1,18 +1,36 @@
+"use client";
+
 import Counter from "@/components/counter";
 import DiscountBadge from "@/components/discount-badge";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { useCartStore } from "@/store/cart";
 import { formatPrice } from "@/utils/format";
 import { ProductWithTotalPrice } from "@/utils/product";
-import { ArrowDownIcon } from "lucide-react";
-import { ComponentProps } from "react";
+import { ComponentProps, useState } from "react";
 
 interface ProductInfoProps extends ComponentProps<"section"> {
   product: ProductWithTotalPrice;
 }
 
 const ProductInfo = ({ product, ...rest }: ProductInfoProps) => {
-  const { name, basePrice, totalPrice, description } = product;
+  const [quantity, setQuantity] = useState(1);
+
+  const { name, basePrice, totalPrice, discountPercentage, description } =
+    product;
+
+  const addProductToCart = useCartStore((state) => state.addProductToCart);
+
+  const handleAddProductToCart = () => {
+    addProductToCart({ ...product, quantity });
+  };
+
+  const handleIncreaseQuantity = () => {
+    setQuantity((currentState) => currentState + 1);
+  };
+
+  const handleDecreaseQuantity = () => {
+    setQuantity((currentState) => currentState - 1);
+  };
 
   return (
     <section {...rest}>
@@ -20,25 +38,35 @@ const ProductInfo = ({ product, ...rest }: ProductInfoProps) => {
         <h2 className="text-xl">{name}</h2>
 
         <div>
-          <p className="text-muted-foreground">
-            De:{" "}
-            <span className="line-through">
-              {formatPrice(Number(basePrice))}
-            </span>
-          </p>
+          {discountPercentage > 0 && (
+            <p className="text-muted-foreground">
+              De:{" "}
+              <span className="line-through">
+                {formatPrice(Number(basePrice))}
+              </span>
+            </p>
+          )}
 
           <div className="flex items-center gap-2">
             <p className="text-2xl font-bold">
-              Por: {formatPrice(Number(totalPrice))}
+              {discountPercentage > 0
+                ? `Por: ${formatPrice(totalPrice)}`
+                : formatPrice(totalPrice)}
             </p>
 
-            <DiscountBadge className="text-xl" iconSize={24}>
-              {product.discountPercentage}
-            </DiscountBadge>
+            {discountPercentage > 0 && (
+              <DiscountBadge className="text-xl" iconSize={24}>
+                {discountPercentage}
+              </DiscountBadge>
+            )}
           </div>
         </div>
 
-        <Counter />
+        <Counter
+          count={quantity}
+          increaseCount={handleIncreaseQuantity}
+          decreaseCount={handleDecreaseQuantity}
+        />
 
         <div className="space-y-2">
           <h3 className="font-bold">Descrição</h3>
@@ -46,7 +74,10 @@ const ProductInfo = ({ product, ...rest }: ProductInfoProps) => {
           <p className="text-sm text-muted-foreground">{description}</p>
         </div>
 
-        <Button className="w-full font-bold uppercase">
+        <Button
+          className="w-full font-bold uppercase"
+          onClick={handleAddProductToCart}
+        >
           Adicionar ao carrinho
         </Button>
       </div>

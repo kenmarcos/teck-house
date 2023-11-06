@@ -10,7 +10,7 @@ const Title = ({ children, ...rest }: TitleProps) => {
     <h2 {...rest}>
       <Badge
         variant="outline"
-        className="gap-2 border-primary px-3 py-2 uppercase"
+        className="gap-2 border-primary px-3 py-2 font-bold uppercase"
       >
         {children}
       </Badge>

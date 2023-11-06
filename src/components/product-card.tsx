@@ -8,7 +8,8 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ product }: ProductCardProps) => {
-  const { name, imageUrls, basePrice, discountPercentage } = product;
+  const { name, imageUrls, basePrice, totalPrice, discountPercentage } =
+    product;
 
   return (
     <div className="w-[150px] space-y-2 md:w-[190px]">
@@ -36,12 +37,16 @@ const ProductCard = ({ product }: ProductCardProps) => {
 
         <div>
           <p className="font-bold text-primary">
-            {formatPrice(Number(basePrice))}
+            {discountPercentage > 0
+              ? formatPrice(totalPrice)
+              : formatPrice(Number(basePrice))}
           </p>
 
-          <p className="text-xs text-muted-foreground line-through">
-            {formatPrice(680.35)}
-          </p>
+          {discountPercentage > 0 && (
+            <p className="text-xs text-muted-foreground line-through">
+              {formatPrice(Number(basePrice))}
+            </p>
+          )}
         </div>
       </div>
     </div>

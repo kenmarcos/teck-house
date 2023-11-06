@@ -4,6 +4,7 @@ import Link from "next/link";
 import MobileMenu from "./mobile-menu";
 import { ModeToggle } from "./mode-toggle";
 import { Separator } from "./ui/separator";
+import Cart from "./cart";
 
 const Header = () => {
   return (
@@ -49,9 +50,7 @@ const Header = () => {
             <User2Icon size={16} />
           </Button>
 
-          <Button size="icon" variant="outline">
-            <ShoppingCartIcon size={16} />
-          </Button>
+          <Cart />
 
           <ModeToggle />
         </div>

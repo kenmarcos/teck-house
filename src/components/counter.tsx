@@ -3,37 +3,57 @@
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import { Button } from "./ui/button";
 import { twMerge } from "tailwind-merge";
-import { ComponentProps, useState } from "react";
+import { ComponentProps, Dispatch, SetStateAction, useState } from "react";
 
-const Counter = ({ className, ...rest }: ComponentProps<"div">) => {
-  const [count, setCount] = useState(1);
+interface CounterProps extends ComponentProps<"div"> {
+  count: number;
+  buttonSize?: "sm" | "md";
+  decreaseCount: () => void;
+  increaseCount: () => void;
+}
 
+const Counter = ({
+  count,
+  buttonSize = "md",
+  className,
+  increaseCount,
+  decreaseCount,
+  ...rest
+}: CounterProps) => {
   const containerClasses = twMerge("flex items-center gap-x-4", className);
 
-  const increaseCount = () => {
-    setCount((currentState) => currentState + 1);
+  const handleIncreaseCount = () => {
+    increaseCount();
   };
 
-  const decreaseCount = () => {
-    if (count === 0) return;
+  const handleDecreaseCount = () => {
+    if (count === 1) return;
 
-    setCount((currentState) => currentState - 1);
+    decreaseCount();
   };
+
+  const buttonTailwindSize = buttonSize === "md" ? "h-10 w-10" : "h-7 w-7";
 
   return (
     <div {...rest} className={containerClasses}>
       <Button
         size="icon"
         variant="outline"
-        onClick={decreaseCount}
-        disabled={count === 0}
+        onClick={handleDecreaseCount}
+        disabled={count === 1}
+        className={buttonTailwindSize}
       >
         <ChevronLeftIcon />
       </Button>
 
       <span>{count}</span>
 
-      <Button size="icon" variant="outline" onClick={increaseCount}>
+      <Button
+        size="icon"
+        variant="outline"
+        onClick={handleIncreaseCount}
+        className={buttonTailwindSize}
+      >
         <ChevronRightIcon />
       </Button>
     </div>
