@@ -50,11 +50,7 @@ const Header = () => {
             <User2Icon size={16} />
           </Button>
 
-          <Cart>
-            <Button size="icon" variant="outline">
-              <ShoppingCartIcon size={16} />
-            </Button>
-          </Cart>
+          <Cart />
 
           <ModeToggle />
         </div>

@@ -10,12 +10,9 @@ import { Button } from "./ui/button";
 import CartInfo from "./cart-info";
 import { formatPrice } from "@/utils/format";
 import { ScrollArea } from "./ui/scroll-area";
+import { Badge } from "./ui/badge";
 
-interface CartProps {
-  children: ReactNode;
-}
-
-const Cart = ({ children }: CartProps) => {
+const Cart = () => {
   const cartProducts = useCartStore((state) => state.products);
 
   const subtotal = useMemo(() => {
@@ -46,7 +43,16 @@ const Cart = ({ children }: CartProps) => {
 
   return (
     <Sheet>
-      <SheetTrigger asChild>{children}</SheetTrigger>
+      <SheetTrigger asChild>
+        <Button size="icon" variant="outline" className="relative">
+          <ShoppingCartIcon size={16} />
+          {cartProducts.length > 0 && (
+            <Badge className="absolute -top-3 left-1/2 justify-center">
+              {cartProducts.length}
+            </Badge>
+          )}
+        </Button>
+      </SheetTrigger>
 
       <SheetContent>
         <SheetHeader>
