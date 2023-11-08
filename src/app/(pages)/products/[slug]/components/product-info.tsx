@@ -3,6 +3,7 @@
 import Counter from "@/components/counter";
 import DiscountBadge from "@/components/discount-badge";
 import { Button } from "@/components/ui/button";
+import { useToast } from "@/components/ui/use-toast";
 import { useCartStore } from "@/store/cart";
 import { formatPrice } from "@/utils/format";
 import { ProductWithTotalPrice } from "@/utils/product";
@@ -19,9 +20,14 @@ const ProductInfo = ({ product, ...rest }: ProductInfoProps) => {
     product;
 
   const addProductToCart = useCartStore((state) => state.addProductToCart);
+  const { toast } = useToast();
 
   const handleAddProductToCart = () => {
     addProductToCart({ ...product, quantity });
+
+    toast({
+      description: "Produto adicionado ao carrinho!",
+    });
   };
 
   const handleIncreaseQuantity = () => {
