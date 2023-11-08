@@ -58,7 +58,12 @@ const Cart = () => {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button size="icon" variant="outline" className="relative">
+        <Button
+          size="icon"
+          variant="outline"
+          className="relative"
+          title="Carrinho de Compras"
+        >
           <ShoppingCartIcon size={16} />
           {cartProducts.length > 0 && (
             <Badge className="absolute -top-3 left-1/2 justify-center">
