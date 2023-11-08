@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Toaster } from "@/components/ui/toaster";
+import AuthProvider from "@/providers/auth";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -32,12 +33,14 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <Header />
+            <AuthProvider>
+              <Header />
 
-            <main className="flex-1">{children}</main>
+              <main className="flex-1">{children}</main>
 
-            <Footer />
-            <Toaster />
+              <Footer />
+              <Toaster />
+            </AuthProvider>
           </ThemeProvider>
         </div>
       </body>
