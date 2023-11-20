@@ -20,7 +20,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { signIn, signOut, useSession } from "next-auth/react";
-import { Avatar, AvatarFallback } from "./ui/avatar";
+import { Avatar } from "./ui/avatar";
 import { AvatarImage } from "@radix-ui/react-avatar";
 
 interface MobileMenuProps {
