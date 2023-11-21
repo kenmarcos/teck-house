@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, useEffect, useMemo } from "react";
+import { ReactNode, useEffect, useMemo, useState } from "react";
 import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "./ui/sheet";
 import Title from "./title";
 import { AlertCircleIcon, ShoppingCartIcon } from "lucide-react";
@@ -13,7 +13,7 @@ import { ScrollArea } from "./ui/scroll-area";
 import { Badge } from "./ui/badge";
 import { createCheckout } from "@/actions/checkout";
 import { loadStripe } from "@stripe/stripe-js";
-import { useSession } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 
 const Cart = () => {
   const session = useSession();
@@ -130,7 +130,7 @@ const Cart = () => {
                 />
               </div>
 
-              <div>
+              <div className="space-y-2">
                 <Button
                   className="w-full font-bold uppercase disabled:pointer-events-auto disabled:cursor-not-allowed"
                   onClick={handleCheckout}
@@ -138,11 +138,18 @@ const Cart = () => {
                 >
                   Finalizar Compra
                 </Button>
+
                 {session.status === "unauthenticated" && (
-                  <small className="text-muted-foreground underline">
-                    Para finalizar a compra, é necessário fazer login na sua
-                    conta
-                  </small>
+                  <p className="text-xs text-muted-foreground">
+                    Para finalizar a compra, é necessário fazer{" "}
+                    <Button
+                      variant="link"
+                      className="h-auto p-0 text-xs font-bold"
+                      onClick={async () => await signIn()}
+                    >
+                      Login
+                    </Button>
+                  </p>
                 )}
               </div>
             </>
