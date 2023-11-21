@@ -13,8 +13,10 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
+import { DropdownMenuLabel } from "@radix-ui/react-dropdown-menu";
 
 const Header = () => {
   const { status, data } = useSession();
@@ -79,7 +81,16 @@ const Header = () => {
                   </Avatar>
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-44" align="end">
+              <DropdownMenuContent className="w-52" align="end">
+                <DropdownMenuLabel className="px-2 py-1.5">
+                  <p className="truncate text-sm font-medium">
+                    {data?.user?.name}
+                  </p>
+                  <p className="truncate text-xs text-muted-foreground">
+                    {data?.user?.email}
+                  </p>
+                </DropdownMenuLabel>
+                <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
                   <Link href={"/orders"} className="flex cursor-pointer gap-2">
                     <ShoppingBagIcon size={16} />
