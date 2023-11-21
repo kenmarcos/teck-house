@@ -13,8 +13,11 @@ import { ScrollArea } from "./ui/scroll-area";
 import { Badge } from "./ui/badge";
 import { createCheckout } from "@/actions/checkout";
 import { loadStripe } from "@stripe/stripe-js";
+import { useSession } from "next-auth/react";
 
 const Cart = () => {
+  const session = useSession();
+
   const cartProducts = useCartStore((state) => state.products);
 
   const subtotal = useMemo(() => {
@@ -58,7 +61,12 @@ const Cart = () => {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button size="icon" variant="outline" className="relative">
+        <Button
+          size="icon"
+          variant="outline"
+          className="relative"
+          title="Carrinho de Compras"
+        >
           <ShoppingCartIcon size={16} />
           {cartProducts.length > 0 && (
             <Badge className="absolute -top-3 left-1/2 justify-center">
@@ -122,12 +130,21 @@ const Cart = () => {
                 />
               </div>
 
-              <Button
-                className="w-full font-bold uppercase"
-                onClick={handleCheckout}
-              >
-                Finalizar Compra
-              </Button>
+              <div>
+                <Button
+                  className="w-full font-bold uppercase disabled:pointer-events-auto disabled:cursor-not-allowed"
+                  onClick={handleCheckout}
+                  disabled={session.status === "unauthenticated"}
+                >
+                  Finalizar Compra
+                </Button>
+                {session.status === "unauthenticated" && (
+                  <small className="text-muted-foreground underline">
+                    Para finalizar a compra, é necessário fazer login na sua
+                    conta
+                  </small>
+                )}
+              </div>
             </>
           )}
         </div>

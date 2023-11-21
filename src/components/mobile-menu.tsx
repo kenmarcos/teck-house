@@ -1,3 +1,5 @@
+"use client";
+
 import { ReactNode } from "react";
 import {
   Sheet,
@@ -12,15 +14,30 @@ import {
   HomeIcon,
   ListOrderedIcon,
   LogInIcon,
+  LogOutIcon,
   PercentIcon,
+  ShoppingBagIcon,
 } from "lucide-react";
 import Link from "next/link";
+import { signIn, signOut, useSession } from "next-auth/react";
+import { Avatar } from "./ui/avatar";
+import { AvatarImage } from "@radix-ui/react-avatar";
 
 interface MobileMenuProps {
   children: ReactNode;
 }
 
 const MobileMenu = ({ children }: MobileMenuProps) => {
+  const { status, data } = useSession();
+
+  const login = async () => {
+    await signIn();
+  };
+
+  const logout = async () => {
+    await signOut();
+  };
+
   return (
     <Sheet>
       <SheetTrigger asChild>{children}</SheetTrigger>
@@ -30,10 +47,41 @@ const MobileMenu = ({ children }: MobileMenuProps) => {
           <SheetTitle className="text-left">Menu</SheetTitle>
         </SheetHeader>
 
-        <div className="space-y-4 py-4">
-          <Button variant="ghost" className="w-full justify-start gap-2">
-            <LogInIcon size={16} /> Fazer Login
-          </Button>
+        {status === "authenticated" && (
+          <div className="mt-4 flex items-center gap-2">
+            <Avatar className="h-8 w-8">
+              {data?.user?.image && <AvatarImage src={data.user.image} />}
+            </Avatar>
+
+            <div>
+              <p className="truncate text-sm font-medium">{data?.user?.name}</p>
+              <p className="truncate text-xs text-muted-foreground">
+                {data?.user?.email}
+              </p>
+            </div>
+          </div>
+        )}
+
+        <div className="mt-4 space-y-4">
+          {status === "unauthenticated" && (
+            <Button
+              variant="ghost"
+              className="w-full justify-start gap-2"
+              onClick={login}
+            >
+              <LogInIcon size={16} /> Fazer Login
+            </Button>
+          )}
+
+          {status === "authenticated" && (
+            <Button
+              variant="ghost"
+              className="w-full justify-start gap-2"
+              onClick={logout}
+            >
+              <LogOutIcon size={16} /> Fazer Logout
+            </Button>
+          )}
 
           <SheetClose asChild>
             <Button
@@ -46,6 +94,21 @@ const MobileMenu = ({ children }: MobileMenuProps) => {
               </Link>
             </Button>
           </SheetClose>
+
+          {status === "authenticated" && (
+            <SheetClose asChild>
+              <Button
+                asChild
+                variant="ghost"
+                className="w-full justify-start gap-2"
+              >
+                <Link href="/orders">
+                  <ShoppingBagIcon size={16} />
+                  Meus Pedidos
+                </Link>
+              </Button>
+            </SheetClose>
+          )}
 
           <Button variant="ghost" className="w-full justify-start gap-2">
             <PercentIcon size={16} /> Ofertas
