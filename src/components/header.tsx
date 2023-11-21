@@ -19,14 +19,6 @@ import {
 const Header = () => {
   const { status, data } = useSession();
 
-  const login = async () => {
-    await signIn();
-  };
-
-  const logout = async () => {
-    await signOut();
-  };
-
   return (
     <header className="border-b border-border">
       <div className="container flex items-center justify-between p-7">
@@ -71,7 +63,7 @@ const Header = () => {
               className="hidden lg:inline-flex"
               size="icon"
               variant="outline"
-              onClick={login}
+              onClick={async () => await signIn()}
               title="Fazer Login"
             >
               <User2Icon size={16} />
@@ -96,7 +88,7 @@ const Header = () => {
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   className="cursor-pointer gap-2"
-                  onClick={logout}
+                  onClick={() => signOut()}
                 >
                   <LogOutIcon size={16} /> Fazer Logout
                 </DropdownMenuItem>

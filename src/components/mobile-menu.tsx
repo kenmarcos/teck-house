@@ -30,14 +30,6 @@ interface MobileMenuProps {
 const MobileMenu = ({ children }: MobileMenuProps) => {
   const { status, data } = useSession();
 
-  const login = async () => {
-    await signIn();
-  };
-
-  const logout = async () => {
-    await signOut();
-  };
-
   return (
     <Sheet>
       <SheetTrigger asChild>{children}</SheetTrigger>
@@ -67,7 +59,7 @@ const MobileMenu = ({ children }: MobileMenuProps) => {
             <Button
               variant="ghost"
               className="w-full justify-start gap-2"
-              onClick={login}
+              onClick={async () => await signIn()}
             >
               <LogInIcon size={16} /> Fazer Login
             </Button>
@@ -77,7 +69,7 @@ const MobileMenu = ({ children }: MobileMenuProps) => {
             <Button
               variant="ghost"
               className="w-full justify-start gap-2"
-              onClick={logout}
+              onClick={async () => await signOut()}
             >
               <LogOutIcon size={16} /> Fazer Logout
             </Button>
