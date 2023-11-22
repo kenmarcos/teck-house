@@ -26,6 +26,16 @@ interface OrderCardProps {
   }>;
 }
 
+enum OrderPaymentStatus {
+  AWAITING = "Pendente",
+  PAID = "Pago",
+}
+
+enum OrderPaymentStatusColor {
+  AWAITING = "text-yellow-500",
+  PAID = "text-green-600",
+}
+
 const OrderCard = ({ order }: OrderCardProps) => {
   const subtotal = useMemo(() => {
     return order.orderProducts.reduce((acc, orderProduct) => {
@@ -51,16 +61,22 @@ const OrderCard = ({ order }: OrderCardProps) => {
         <AccordionItem value={order.id}>
           <AccordionTrigger className="px-5">
             <div className="text-start">
-              <p className="uppercase">Id do pedido</p>
-              <p>{order.id}</p>
+              <p className="uppercase">Id do pedido:</p>
+              <p className="text-sm text-muted-foreground">{order.id}</p>
             </div>
           </AccordionTrigger>
 
           <AccordionContent className="p-5">
-            <div className="flex justify-between text-xs ">
+            <div className="flex items-center justify-between text-xs ">
               <div>
                 <p className="font-bold uppercase">Status</p>
-                <p className="font-semibold text-primary">Pago</p>
+                <p
+                  className={`font-semibold ${
+                    OrderPaymentStatusColor[order.status]
+                  }`}
+                >
+                  {OrderPaymentStatus[order.status]}
+                </p>
               </div>
 
               <div>
