@@ -3,7 +3,10 @@
 import { CartItem } from "@/store/cart";
 import Stripe from "stripe";
 
-export const createCheckout = async (cartProducts: CartItem[]) => {
+export const createCheckout = async (
+  cartProducts: CartItem[],
+  orderId: string,
+) => {
   // Create instance of Stripe
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
     apiVersion: "2023-10-16",
@@ -29,6 +32,9 @@ export const createCheckout = async (cartProducts: CartItem[]) => {
         quantity: cartProduct.quantity,
       };
     }),
+    metadata: {
+      orderId,
+    },
   });
 
   // Return checkout

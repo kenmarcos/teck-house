@@ -14,6 +14,7 @@ import { Badge } from "./ui/badge";
 import { createCheckout } from "@/actions/checkout";
 import { loadStripe } from "@stripe/stripe-js";
 import { signIn, useSession } from "next-auth/react";
+import { createOrder } from "@/actions/order";
 
 const Cart = () => {
   const session = useSession();
@@ -39,7 +40,16 @@ const Cart = () => {
   }, [subtotal, total]);
 
   const handleCheckout = async () => {
-    const checkout = await createCheckout(cartProducts);
+    if (!session.data?.user) {
+      await signIn();
+      return;
+    }
+
+    // criar pedido no banco de dados
+    const order = await createOrder(cartProducts, session.data.user.id);
+
+    // redirecionar para o Checkout Stripe
+    const checkout = await createCheckout(cartProducts, order.id);
 
     const stripe = await loadStripe(
       process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY,
