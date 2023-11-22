@@ -7,7 +7,7 @@ import { AlertCircleIcon, ShoppingCartIcon } from "lucide-react";
 import CartItemCard from "./cart-item-card";
 import { useCartStore } from "@/store/cart";
 import { Button } from "./ui/button";
-import CartInfo from "./cart-info";
+import PriceInfo from "./price-info";
 import { formatPrice } from "@/utils/format";
 import { ScrollArea } from "./ui/scroll-area";
 import { Badge } from "./ui/badge";
@@ -122,18 +122,18 @@ const Cart = () => {
               </ScrollArea>
 
               <div>
-                <CartInfo text="Subtotal" data={formatPrice(subtotal)} />
+                <PriceInfo text="Subtotal" data={formatPrice(subtotal)} />
 
-                <CartInfo text="Entrega" data="GRÁTIS" />
+                <PriceInfo text="Entrega" data="GRÁTIS" />
 
                 {totalDiscount > 0 && (
-                  <CartInfo
+                  <PriceInfo
                     text="Descontos"
                     data={`- ${formatPrice(totalDiscount)}`}
                   />
                 )}
 
-                <CartInfo
+                <PriceInfo
                   className="font-bold"
                   text="Total"
                   data={formatPrice(total)}

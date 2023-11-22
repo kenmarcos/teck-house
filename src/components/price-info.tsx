@@ -1,12 +1,12 @@
 import { ComponentProps } from "react";
 import { twMerge } from "tailwind-merge";
 
-interface CartInfoProps extends ComponentProps<"div"> {
+interface PriceInfoProps extends ComponentProps<"div"> {
   text: string;
   data: string;
 }
 
-const CartInfo = ({ text, data, className, ...rest }: CartInfoProps) => {
+const PriceInfo = ({ text, data, className, ...rest }: PriceInfoProps) => {
   return (
     <div
       {...rest}
@@ -22,4 +22,4 @@ const CartInfo = ({ text, data, className, ...rest }: CartInfoProps) => {
   );
 };
 
-export default CartInfo;
+export default PriceInfo;
