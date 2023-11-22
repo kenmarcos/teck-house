@@ -58,8 +58,8 @@ const CartItemCard = ({ product }: CartItemCardProps) => {
           />
         </div>
 
-        <div className="flex flex-col justify-between">
-          <p className="truncate text-xs" title="Logitech MX Master 3s">
+        <div className="flex max-w-[174px] flex-col justify-between">
+          <p className="truncate text-xs" title={name}>
             {name}
           </p>
 
