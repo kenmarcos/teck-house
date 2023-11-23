@@ -3,7 +3,10 @@
 import { CartItem } from "@/store/cart";
 import Stripe from "stripe";
 
-export const createCheckout = async (cartProducts: CartItem[]) => {
+export const createCheckout = async (
+  cartProducts: CartItem[],
+  orderId: string,
+) => {
   // Create instance of Stripe
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
     apiVersion: "2023-10-16",
@@ -13,7 +16,7 @@ export const createCheckout = async (cartProducts: CartItem[]) => {
   const checkout = await stripe.checkout.sessions.create({
     mode: "payment",
     payment_method_types: ["card"],
-    success_url: `${process.env.HOST_URL}/orders/success?session_id={CHECKOUT_SESSION_ID}`,
+    success_url: `${process.env.HOST_URL}/orders/success?session_id={CHECKOUT_SESSION_ID}&order_id=${orderId}`,
     cancel_url: process.env.HOST_URL,
     line_items: cartProducts.map((cartProduct) => {
       return {
@@ -29,6 +32,9 @@ export const createCheckout = async (cartProducts: CartItem[]) => {
         quantity: cartProduct.quantity,
       };
     }),
+    metadata: {
+      orderId,
+    },
   });
 
   // Return checkout

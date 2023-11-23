@@ -74,9 +74,9 @@ const Header = () => {
 
           {status === "authenticated" && (
             <DropdownMenu>
-              <DropdownMenuTrigger asChild>
+              <DropdownMenuTrigger asChild className="hidden lg:flex">
                 <Button size="icon" variant="ghost">
-                  <Avatar className="hidden h-8 w-8 lg:block">
+                  <Avatar className="h-8 w-8">
                     {data?.user?.image && <AvatarImage src={data.user.image} />}
                   </Avatar>
                 </Button>
