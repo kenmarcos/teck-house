@@ -58,6 +58,11 @@ const Cart = () => {
     stripe?.redirectToCheckout({
       sessionId: checkout.id,
     });
+
+    // limpar o carrinho
+    localStorage.removeItem("@teck-house:cart");
+
+    useCartStore.setState({ products: [] });
   };
 
   useEffect(() => {

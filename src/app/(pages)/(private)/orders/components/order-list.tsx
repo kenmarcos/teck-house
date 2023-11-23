@@ -26,7 +26,7 @@ const OrderList = async () => {
     <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
       {orders.map((order) => (
         <li key={order.id}>
-          <OrderCard order={order} />
+          <OrderCard order={JSON.parse(JSON.stringify(order))} />
         </li>
       ))}
     </ul>

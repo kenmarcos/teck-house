@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Accordion,
   AccordionContent,
@@ -13,6 +15,9 @@ import PriceInfo from "@/components/price-info";
 import { formatPrice } from "@/utils/format";
 import { useMemo } from "react";
 import { computeProductTotalPrice } from "@/utils/product";
+import { Button } from "@/components/ui/button";
+import { createCheckout } from "@/actions/checkout";
+import { loadStripe } from "@stripe/stripe-js";
 
 interface OrderCardProps {
   order: Prisma.OrderGetPayload<{
@@ -55,6 +60,28 @@ const OrderCard = ({ order }: OrderCardProps) => {
 
   const totalDiscount = subtotal - total;
 
+  const handleCheckout = async () => {
+    const products = order.orderProducts.map((orderProduct) => {
+      return {
+        ...orderProduct.product,
+        basePrice: orderProduct.orderBasePrice,
+        discountPercentage: orderProduct.orderDiscountPercentage,
+        totalPrice: computeProductTotalPrice(orderProduct.product).totalPrice,
+        quantity: orderProduct.quantity,
+      };
+    });
+
+    const checkout = await createCheckout(products, order.id);
+
+    const stripe = await loadStripe(
+      process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY,
+    );
+
+    stripe?.redirectToCheckout({
+      sessionId: checkout.id,
+    });
+  };
+
   return (
     <Card>
       <Accordion type="single" className="w-full" collapsible>
@@ -67,7 +94,7 @@ const OrderCard = ({ order }: OrderCardProps) => {
           </AccordionTrigger>
 
           <AccordionContent className="p-5">
-            <div className="flex items-center justify-between text-xs ">
+            <div className="flex justify-between gap-5 text-xs">
               <div>
                 <p className="font-bold uppercase">Status</p>
                 <p
@@ -82,14 +109,25 @@ const OrderCard = ({ order }: OrderCardProps) => {
               <div>
                 <p className="font-bold uppercase">Data</p>
                 <p className="text-muted-foreground">
-                  {format(order.createdAt, "dd/MM/yy")}
+                  {format(new Date(order.createdAt), "dd/MM/yy")}
                 </p>
               </div>
 
-              <div>
-                <p className="font-bold uppercase">Pagamento</p>
-                <p className="text-muted-foreground">Cartão</p>
-              </div>
+              {order.status === "PAID" && (
+                <div>
+                  <p className="font-bold uppercase">Pagamento</p>
+                  <p className="text-muted-foreground">Cartão</p>
+                </div>
+              )}
+
+              {order.status === "AWAITING" && (
+                <Button
+                  className="block w-full max-w-[280px]"
+                  onClick={handleCheckout}
+                >
+                  Fazer pagamento
+                </Button>
+              )}
             </div>
 
             <Separator className="my-5" />
