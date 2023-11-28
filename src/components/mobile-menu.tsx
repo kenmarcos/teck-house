@@ -102,9 +102,17 @@ const MobileMenu = ({ children }: MobileMenuProps) => {
             </SheetClose>
           )}
 
-          <Button variant="ghost" className="w-full justify-start gap-2">
-            <PercentIcon size={16} /> Ofertas
-          </Button>
+          <SheetClose asChild>
+            <Button
+              asChild
+              variant="ghost"
+              className="w-full justify-start gap-2"
+            >
+              <Link href="/offers">
+                <PercentIcon size={16} /> Ofertas
+              </Link>
+            </Button>
+          </SheetClose>
 
           <SheetClose asChild>
             <Button

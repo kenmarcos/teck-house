@@ -49,8 +49,8 @@ const Header = () => {
           </Button>
 
           <Separator orientation="vertical" />
-          <Button variant="link" className="dark:text-foreground">
-            Ofertas
+          <Button asChild variant="link" className="dark:text-foreground">
+            <Link href="/offers">Ofertas</Link>
           </Button>
 
           <Separator orientation="vertical" />
