@@ -1,4 +1,4 @@
-import { PrismaClient } from "@prisma/client";
+const { PrismaClient } = require("@prisma/client");
 
 const prisma = new PrismaClient();
 
@@ -8,7 +8,8 @@ async function main() {
       data: {
         name: "Mouses",
         slug: "mouses",
-        imageUrl: "https://fsw-store.s3.sa-east-1.amazonaws.com/mouses.png",
+        imageUrl:
+          "https://utfs.io/f/857ace02-31c2-43ae-a6f3-7d97b0cb279a-e7tkok.png",
       },
     });
 
@@ -17,12 +18,12 @@ async function main() {
         name: "Logitech MX Master 3s",
         slug: "logitech-mx-master-3s",
         description:
-          "O mouse Logitech MX Master 3s é uma poderosa e sofisticada ferramenta de produtividade que combina design ergonômico com desempenho excepcional. Com uma roda de rolagem MagSpeed e sensor de alta precisão, oferece uma experiência de navegação suave e eficiente. Seu design elegante e confortável é ideal para longas horas de trabalho, e a conectividade versátil permite alternar facilmente entre dispositivos. Com personalização avançada de botões e uma bateria de longa duração, o MX Master 3s é a escolha perfeita para profissionais que buscam produtividade e conforto superiores em seu ambiente de trabalho.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_mx-master-3s.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_mx-master-3s.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_mx-master-3s.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_mx-master-3s.png",
+          "https://utfs.io/f/baccd841-5118-4a43-b7d9-557effb39e03-otetkp.png",
+          "https://utfs.io/f/74ce5572-0cd2-4e90-a4b2-b982fb968e93-x6ep3u.png",
+          "https://utfs.io/f/0a79c814-eb1b-49cf-a8cf-073b69f2bfb4-thphc5.png",
+          "https://utfs.io/f/8453c879-dd66-41ff-b686-f564af33f324-l4plt0.png",
         ],
         basePrice: 650,
         categoryId: mousesCategory.id,
@@ -32,12 +33,12 @@ async function main() {
         name: "Logitech Pro X Superlight",
         slug: "logitech-pro-x-superlight",
         description:
-          "O mouse Logitech Pro X Superlight é a escolha definitiva para jogadores ávidos e profissionais que buscam desempenho máximo em jogos. Com um design ultraleve e aerodinâmico, pesando apenas 63 gramas, ele oferece uma experiência de jogo ágil e precisa. Equipado com o sensor HERO, oferece rastreamento de alta precisão com até 25.000 DPI, garantindo movimentos suaves e responsivos. Além disso, seus botões mecânicos de alta qualidade proporcionam uma resposta rápida e durabilidade excepcional. O Logitech Pro X Superlight é projetado para jogadores que exigem o melhor desempenho e conforto, proporcionando uma vantagem competitiva definitiva em qualquer campo de batalha virtual.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-superlight.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-superlight.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-superlight.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-superlight.png",
+          "https://utfs.io/f/ffb6d4e3-acce-476d-ac30-52d76071a089-idaumz.png",
+          "https://utfs.io/f/dee9af33-6c1b-4ec4-b239-31065984a254-40f9t2.png",
+          "https://utfs.io/f/8c82989e-5a24-421e-b56d-a87d526ba5c1-qe5e93.png",
+          "https://utfs.io/f/a366c05e-27ec-4e1c-8d2f-7e3cc740ce78-m98ja0.png",
         ],
         basePrice: 750,
         categoryId: mousesCategory.id,
@@ -47,12 +48,12 @@ async function main() {
         name: "Logitech G305 Lightspeed",
         slug: "logitech-g305-lightspeed",
         description:
-          "O mouse Logitech G305 Lightspeed é a escolha perfeita para os gamers que buscam desempenho excepcional e liberdade sem fio. Com a tecnologia Lightspeed, oferece uma conexão ultra rápida e estável, garantindo que cada movimento seja preciso e responsivo. Seu sensor HERO proporciona uma precisão incrível, com até 12.000 DPI, e sua durabilidade é notável, com uma vida útil da pilha de até 9 meses. Com design ergonômico e 6 botões programáveis, o Logitech G305 oferece uma experiência de jogo excepcional para gamers de todos os níveis.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-lightspeed.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-lightspeed.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-lightspeed.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-lightspeed.png",
+          "https://utfs.io/f/3e2a7283-683f-43b5-a2c0-c64b5890a084-6pfvtn.png",
+          "https://utfs.io/f/05c62fd7-1aa9-46c0-9f81-29a92e330309-t3609o.png",
+          "https://utfs.io/f/b38e5709-6583-4c48-8f24-5762b18e76d7-jk7x9f.png",
+          "https://utfs.io/f/409af6e8-8c08-4afd-9615-a79c7f5f69cd-2ti76m.png",
         ],
         basePrice: 300,
         categoryId: mousesCategory.id,
@@ -62,12 +63,12 @@ async function main() {
         name: "Hyperx Pulsefire Dart",
         slug: "hyperx-pulsefire-dart",
         description:
-          "O mouse HyperX Pulsefire Dart é a escolha ideal para gamers que buscam desempenho superior e liberdade sem fio. Com sua conectividade RF 2.4GHz e bateria de longa duração, este mouse oferece uma experiência de jogo sem atrasos, garantindo que você esteja sempre um passo à frente da concorrência. Com um sensor óptico de alta precisão, botões programáveis e iluminação RGB personalizável, o Pulsefire Dart proporciona uma combinação perfeita de funcionalidade e estilo para elevar sua experiência de jogo a um novo patamar. Seja em jogos de tiro, estratégia ou qualquer outro gênero, este mouse foi projetado para ajudá-lo a alcançar o máximo desempenho.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_hyperx-dart.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_hyperx-dart.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_hyperx-dart.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_hyperx-dart.png",
+          "https://utfs.io/f/c5200bd8-10b5-49bd-be72-deca34b2335a-1xd5uq.png",
+          "https://utfs.io/f/78bbbd0e-70ff-4970-b733-c34ef56abde0-2xbhct.png",
+          "https://utfs.io/f/9d12ba27-9dd0-48e9-84c1-a6297eeab4ff-7s04kc.png",
+          "https://utfs.io/f/322954c1-5ced-4296-8e87-a6ea266904ae-cmorrv.png",
         ],
         basePrice: 600,
         categoryId: mousesCategory.id,
@@ -77,12 +78,12 @@ async function main() {
         name: "Razer Deathadder V2 Pro",
         slug: "razer-deathadder-v2-pro",
         description:
-          "O Razer DeathAdder V2 Pro é um mouse de alto desempenho projetado para gamers que buscam precisão e conforto. Equipado com a tecnologia sem fio Razer HyperSpeed, possui uma conexão ultrarrápida para jogos sem interrupções. Seu sensor óptico de 20.000 DPI oferece uma precisão excepcional, enquanto os switches Razer Optical Mouse garantem cliques rápidos e responsivos. Com design ergonômico, é confortável para longas sessões de jogo, e os botões programáveis proporcionam uma experiência de personalização única. O Razer DeathAdder V2 Pro é a escolha ideal para jogadores que desejam vantagem competitiva em seus jogos favoritos.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_razer-deathadder.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_razer-deathadder.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_razer-deathadder.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_razer-deathadder.png",
+          "https://utfs.io/f/182f9c0c-ba17-4b30-bf29-e086817ead3f-5jk68j.png",
+          "https://utfs.io/f/7b3840df-3dac-4237-a244-d5d5d9c18594-m16w6s.png",
+          "https://utfs.io/f/e6746f09-4afa-45e5-b7f0-fc9a0eae3e79-wiafu3.png",
+          "https://utfs.io/f/4276b0c3-6ee7-47bc-8c51-04259992f4a4-g0npvu.png",
         ],
         basePrice: 350,
         categoryId: mousesCategory.id,
@@ -98,7 +99,8 @@ async function main() {
       data: {
         name: "Teclados",
         slug: "keyboards",
-        imageUrl: "https://fsw-store.s3.sa-east-1.amazonaws.com/keyboards.png",
+        imageUrl:
+          "https://utfs.io/f/f9f5bf3e-ebdd-49ea-b983-92f930f9afab-7zu99x.png",
       },
     });
 
@@ -107,12 +109,12 @@ async function main() {
         name: "Logitech MX Keys Mini",
         slug: "logitech-mx-keys-mini",
         description:
-          "O teclado Logitech MX Keys Mini é uma solução compacta e sofisticada para usuários que desejam um teclado de alta qualidade em um formato menor. Com teclas de perfil baixo e retroiluminação ajustável, proporciona uma experiência de digitação confortável e eficiente, tornando-o ideal para produtividade em ambientes de trabalho ou em trânsito. Sua conectividade Bluetooth permite fácil emparelhamento com dispositivos diversos, tornando-o versátil e conveniente. Além disso, sua construção de alta qualidade e design elegante fazem dele uma adição atraente para qualquer ambiente. O Logitech MX Keys Mini é a escolha perfeita para quem busca um teclado compacto e funcional que atenda às necessidades de trabalho e lazer.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-mx-keys-mini.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-mx-keys-mini.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-mx-keys-mini.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-mx-keys-mini.png",
+          "https://utfs.io/f/80787132-a9cb-41ce-ae4d-5c38b359723d-33zg48.png",
+          "https://utfs.io/f/10b3a1b3-f3f2-4fba-a009-af9e2ccc4ed7-ausijr.png",
+          "https://utfs.io/f/030c927c-3341-48b0-839d-65fa2fcb2be9-otkh7q.png",
+          "https://utfs.io/f/1e030d68-5443-4d33-b408-b772b319b9ab-w8rm3f.png",
         ],
         basePrice: 650,
         categoryId: keyboardsCategory.id,
@@ -122,12 +124,12 @@ async function main() {
         name: "Logitech MX Keys S",
         slug: "logitech-mx-keys-s",
         description:
-          "O teclado Logitech MX Keys S é uma elegante e avançada solução de entrada que combina design premium com desempenho excepcional. Projetado para atender às necessidades dos usuários que valorizam a produtividade e o conforto, o MX Keys S oferece uma experiência de digitação excepcionalmente suave e silenciosa, graças às suas teclas de perfil baixo com retroiluminação inteligente. Sua conectividade versátil permite emparelhamento com até três dispositivos diferentes e a troca entre eles é fácil e rápida. Além disso, a bateria de longa duração e os controles de mídia integrados tornam este teclado ideal para quem busca um produto de alta qualidade para aprimorar seu fluxo de trabalho. O Logitech MX Keys S é a escolha perfeita para quem valoriza tanto o estilo quanto o desempenho em um teclado.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-mx-keys-s.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-mx-keys-s.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-mx-keys-s.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-mx-keys-s.png",
+          "https://utfs.io/f/834b0e30-45bc-47dd-b2c1-bfe65ef62eb2-m9yl8y.png",
+          "https://utfs.io/f/e651e1be-734a-4847-976e-b54979290830-du02k1.png",
+          "https://utfs.io/f/2c3788e1-8a8c-4672-af73-d2d3d5878d16-5e1jv4.png",
+          "https://utfs.io/f/90822af7-89cf-4f82-9f8d-cede02239072-31wytt.png",
         ],
         basePrice: 750,
         categoryId: keyboardsCategory.id,
@@ -137,12 +139,12 @@ async function main() {
         name: "Logitech Pop Keys",
         slug: "logitech-pop-keys",
         description:
-          "O teclado Logitech Pop Keys é a escolha perfeita para aqueles que buscam uma experiência de digitação eficiente e elegante. Com um design compacto e elegante, suas teclas de perfil baixo proporcionam uma digitação suave e silenciosa. Além disso, o teclado é compatível com dispositivos móveis e computadores, tornando-o versátil para todas as suas necessidades de digitação. Seu estilo moderno e funcionalidade intuitiva o tornam um acessório indispensável para quem valoriza qualidade e conforto na hora de digitar.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-pop-keys.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-pop-keys.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-pop-keys.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-pop-keys.png",
+          "https://utfs.io/f/9e89c3ab-334b-4e4f-bc9a-6aa2baeeb9c3-u67teu.png",
+          "https://utfs.io/f/46081918-deac-4a8b-a082-caba99ff7b57-58nqzp.png",
+          "https://utfs.io/f/ce638b00-b423-476c-a631-2a5977aa9816-jowbfg.png",
+          "https://utfs.io/f/f7af860a-64d3-4221-acde-51ad510b898b-qeno4j.png",
         ],
         basePrice: 440,
         categoryId: keyboardsCategory.id,
@@ -152,12 +154,12 @@ async function main() {
         name: "Logitech MX Mechanical",
         slug: "logitech-mx-mechanical",
         description:
-          "O teclado Logitech MX Mechanical é a escolha ideal para quem busca uma experiência de digitação superior. Com switches mecânicos de alta qualidade, oferece uma resposta tátil precisa e um som de clique agradável, tornando a digitação mais satisfatória. Além disso, conta com retroiluminação personalizável, teclas programáveis e uma construção robusta e elegante. Este teclado é a combinação perfeita de estilo, desempenho e durabilidade, projetado para atender às necessidades dos usuários mais exigentes. Seja para trabalho ou lazer, o Logitech MX Mechanical é a escolha perfeita para elevar sua experiência de digitação a um novo patamar.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-mx-mechanical.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-mx-mechanical.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-mx-mechanical.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-mx-mechanical.png",
+          "https://utfs.io/f/1c84b35c-a523-4ec5-afab-07717bfb3bc0-tbfuuf.png",
+          "https://utfs.io/f/125ccdc0-9845-43cc-ade4-31dab27d8815-fsmt9h.png",
+          "https://utfs.io/f/125ccdc0-9845-43cc-ade4-31dab27d8815-fsmt9h.png",
+          "https://utfs.io/f/2646c695-127e-43c7-b9e6-8785ae04d775-918ah0.png",
         ],
         basePrice: 700,
         categoryId: keyboardsCategory.id,
@@ -167,12 +169,12 @@ async function main() {
         name: "Epomaker TH80",
         slug: "epomaker-th80",
         description:
-          "O teclado Epomaker TH80 é uma escolha excepcional para os entusiastas de teclados mecânicos em busca de uma experiência de digitação premium. Com sua construção sólida, switches hot-swappable, e iluminação RGB personalizável, o TH80 oferece a combinação perfeita de durabilidade, versatilidade e estética para elevar sua experiência de digitação e gaming a um novo patamar. Seu design compacto e portátil torna-o uma opção conveniente para uso em casa ou em movimento, enquanto sua qualidade de construção e opções de personalização garantem que atenderá às necessidades de qualquer usuário exigente.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_epomaker-th80.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_epomaker-th80.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_epomaker-th80.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_epomaker-th80.png",
+          "https://utfs.io/f/a9a8150a-0fd8-4fa8-a30f-f11aaf90e07d-t8tglh.png",
+          "https://utfs.io/f/cb2f3dac-63b3-4bad-baf5-316094d3f10c-4b9e6c.png",
+          "https://utfs.io/f/697f9e83-d983-4e17-b75c-057f16b57b6c-kmao8t.png",
+          "https://utfs.io/f/cba48ecb-4f08-48c6-9a18-574cd3cd9271-ph9bb6.png",
         ],
         basePrice: 500,
         categoryId: keyboardsCategory.id,
@@ -182,12 +184,12 @@ async function main() {
         name: "Redragon Gamer Ashe",
         slug: "redragon-gamer-ashe",
         description:
-          "O teclado Redragon Gamer Ashe é um equipamento de alta performance projetado para atender às demandas dos jogadores mais exigentes. Com um design ergonômico e iluminação RGB personalizável, o Ashe proporciona uma experiência de jogo imersiva e visualmente deslumbrante. Suas teclas mecânicas oferecem respostas precisas e táteis, tornando-o ideal para jogos de ação e competições. Além disso, conta com recursos avançados, como anti-ghosting e teclas programáveis, garantindo que cada comando seja executado com perfeição. O teclado Redragon Gamer Ashe é a escolha perfeita para gamers que buscam um desempenho excepcional e um visual único em seu setup de jogos.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_redragon-gamer-ashe.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_redragon-gamer-ashe.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_redragon-gamer-ashe.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_redragon-gamer-ashe.png",
+          "https://utfs.io/f/51bbaaa2-b3d8-49e8-b2e3-46f833218186-b14pyz.png",
+          "https://utfs.io/f/82a02e42-e7fe-437b-b534-d86404bdb006-7jaqka.png",
+          "https://utfs.io/f/57225d52-9e6a-4144-8337-c5dd20cbdca6-41gr5l.png",
+          "https://utfs.io/f/0f8ebb24-7818-4243-95b6-c7948688c074-jmrqw.png",
         ],
         basePrice: 400,
         categoryId: keyboardsCategory.id,
@@ -203,7 +205,8 @@ async function main() {
       data: {
         name: "Fones",
         slug: "headphones",
-        imageUrl: "https://fsw-store.s3.sa-east-1.amazonaws.com/headphones.png",
+        imageUrl:
+          "https://utfs.io/f/42bb73b3-4a24-4542-aee4-12fa68014dc3-e7tkon.png",
       },
     });
 
@@ -212,12 +215,12 @@ async function main() {
         name: "Logitech Zone Vibe 100",
         slug: "logitech-zone-vibe-100",
         description:
-          "O Logitech Zone Vibe 100 é um headset premium projetado para proporcionar uma experiência de áudio imersiva e conforto durante longas horas de uso. Com cancelamento de ruído ativo, áudio de alta qualidade e controles intuitivos, este headset é ideal para profissionais que desejam se concentrar no trabalho ou participar de reuniões online com clareza e conforto. Seu design elegante e ergonômico complementa a estética moderna e funcional de qualquer ambiente de trabalho.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-vibe.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-vibe.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-vibe.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-vibe.png",
+          "https://utfs.io/f/e0f86a80-3156-4327-bb51-2a421e3eeabc-cuwa00.png",
+          "https://utfs.io/f/c925ee13-366e-4623-8395-1e85592a5ffc-guymjj.png",
+          "https://utfs.io/f/59c43701-1214-48c9-8a6b-7c7c60aa93de-ogaiw2.png",
+          "https://utfs.io/f/5191ae2c-283b-4562-9165-45bcfe12f88a-59kdnh.png",
         ],
         basePrice: 750,
         categoryId: headphonesCategory.id,
@@ -227,12 +230,12 @@ async function main() {
         name: "Logitech Pro X 2 Lightspeed",
         slug: "logitech-pro-x-2-lightspeed",
         description:
-          "O Logitech Pro X 2 Lightspeed é um fone de ouvido premium projetado para oferecer uma experiência de áudio imersiva e de alta qualidade. Com a tecnologia Lightspeed da Logitech, proporciona uma conexão sem fio rápida e estável, garantindo que você não perca nenhum detalhe sonoro nos seus jogos ou durante chamadas. Além disso, este headset é altamente personalizável, permitindo ajustes no som e nas configurações de acordo com suas preferências, tornando-o ideal para gamers e entusiastas de áudio que buscam o máximo desempenho e conforto.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-lightspeed-phone.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-lightspeed-phone.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-lightspeed-phone.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-lightspeed-phone.png",
+          "https://utfs.io/f/f86c9598-6782-4f91-8161-c3d9d746147a-cnu60s.png",
+          "https://utfs.io/f/e2d2840f-de45-45a5-89ba-724d4cb416f6-x8xsfx.png",
+          "https://utfs.io/f/13ce6f4b-bbdd-459e-a77d-f8b1cf9248c4-h72n42.png",
+          "https://utfs.io/f/c6b472fb-2f40-4794-a2c3-acb159a3acc3-3e0zb3.png",
         ],
         basePrice: 1200,
         categoryId: headphonesCategory.id,
@@ -242,12 +245,12 @@ async function main() {
         name: "Logitech Astro A30",
         slug: "logitech-astro-a30",
         description:
-          "Logitech Astro A30 é uma escolha excepcional para os entusiastas de áudio e gamers que buscam qualidade de som imersiva e conforto duradouro. Com sua construção sólida, design elegante e almofadas auriculares macias, este headset proporciona uma experiência de audição envolvente durante horas de uso. Compatível com uma variedade de plataformas de jogo e dispositivos, o Logitech Astro A30 oferece áudio nítido e um microfone de alta qualidade, tornando-o uma opção versátil e confiável para quem procura uma experiência de jogo e comunicação aprimoradas.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-astro-a30.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-astro-a30.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-astro-a30.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-astro-a30.png",
+          "https://utfs.io/f/4242f20f-a15e-498f-9039-44f183847e0d-3us24m.png",
+          "https://utfs.io/f/82c74203-cf79-466e-9510-8ff5efe5d197-4l6gkb.png",
+          "https://utfs.io/f/c93832d7-adcd-419c-8030-591a444a3e3d-d14z98.png",
+          "https://utfs.io/f/cc70de0f-a415-4876-8777-54c195a315f9-lh3hy5.png",
         ],
         basePrice: 1500,
         categoryId: headphonesCategory.id,
@@ -257,12 +260,12 @@ async function main() {
         name: "Logitech Zone Wired Earbuds",
         slug: "logitech-zone-wired-earbuds",
         description:
-          "O Logitech Zone Wired Earbuds é a escolha ideal para quem busca uma experiência de áudio imersiva e comunicação clara. Estes fones de ouvido oferecem excelente qualidade de som, com cancelamento de ruído ativo e microfones integrados de alto desempenho, tornando-os perfeitos para videoconferências e chamadas telefônicas. Além disso, seu design confortável e compacto os torna ideais para uso prolongado, garantindo a produtividade e o conforto durante todo o dia.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-earbuds.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-earbuds.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-earbuds.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-earbuds.png",
+          "https://utfs.io/f/7b44e130-1bb2-4838-85ac-e8d78a402559-l6h1vy.png",
+          "https://utfs.io/f/8e30cca7-1c73-4408-93b0-47f848036c75-cth6ct.png",
+          "https://utfs.io/f/add1fe25-4246-49b6-bc38-bb361d81435f-4ghato.png",
+          "https://utfs.io/f/be26c88e-abc5-4579-b04e-31d9102f44a2-3wikph.png",
         ],
         basePrice: 550,
         categoryId: headphonesCategory.id,
@@ -272,12 +275,12 @@ async function main() {
         name: "Hyperx Cloud Stinger 2",
         slug: "hyperx-cloud-stinger-2",
         description:
-          "O HyperX Cloud Stinger 2 é um fone de ouvido com headset projetado para oferecer uma experiência de áudio imersiva e confortável para gamers e entusiastas de entretenimento. Com drivers de 50mm, som estéreo de alta qualidade e um microfone com cancelamento de ruído, este headset proporciona uma comunicação nítida durante os jogos, enquanto sua estrutura leve e almofadas de espuma memory foam garantem horas de uso sem desconforto. Além disso, a conveniente conectividade com fio, controles de áudio integrados e um design elegante tornam o Cloud Stinger 2 uma escolha excelente para aqueles que buscam uma experiência sonora excepcional em todas as suas atividades de entretenimento.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_hyperx-stinger.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_hyperx-stinger.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_hyperx-stinger.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_hyperx-stinger.png",
+          "https://utfs.io/f/0b8199d2-2cd8-4927-86e3-d10ffc364403-oxvmyz.png",
+          "https://utfs.io/f/0c95dce8-39d5-46cf-9132-f4a5c5466db7-ghx4a2.png",
+          "https://utfs.io/f/1fffc6b5-66e7-4e1e-bfb3-d7e138d60dd6-81yll5.png",
+          "https://utfs.io/f/2bec72be-a9cb-4627-b90a-7c8a55107152-dzx3s.png",
         ],
         basePrice: 250,
         categoryId: headphonesCategory.id,
@@ -287,12 +290,12 @@ async function main() {
         name: "Razer Kraken X",
         slug: "razer-kraken-x",
         description:
-          "O fone/headset Razer Kraken X é a escolha ideal para os entusiastas de jogos que buscam uma experiência sonora imersiva e conforto duradouro. Com drivers de 40mm e áudio surround 7.1, ele oferece qualidade de som excepcional e permite que você mergulhe completamente em seus jogos favoritos. Além disso, seu design leve e almofadas de ouvido macias garantem horas de conforto ininterrupto, tornando-o perfeito para sessões de jogos prolongadas. Com o Razer Kraken X, você estará pronto para enfrentar qualquer desafio no mundo dos jogos.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_razer-kraken.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_razer-kraken.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_razer-kraken.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_razer-kraken.png",
+          "https://utfs.io/f/6c91e18d-4148-4495-955b-46281aaaaed0-pbckc3.png",
+          "https://utfs.io/f/7ee6e7f5-9fe7-4226-9116-4eab3da7c5c6-xocfv8.png",
+          "https://utfs.io/f/b7593a80-238b-4d59-b996-5186dac3aa88-szrqkr.png",
+          "https://utfs.io/f/89677788-43d8-48ed-ba32-b10ed8d93415-kmrv1m.png",
         ],
         basePrice: 200,
         categoryId: headphonesCategory.id,
@@ -308,7 +311,8 @@ async function main() {
       data: {
         name: "Mousepads",
         slug: "mousepads",
-        imageUrl: "https://fsw-store.s3.sa-east-1.amazonaws.com/mousepads.png",
+        imageUrl:
+          "https://utfs.io/f/5f889f93-7446-4da7-bc6b-4926c85997f9-e7tkom.png",
       },
     });
 
@@ -317,12 +321,12 @@ async function main() {
         name: "Logitech Powerplay",
         slug: "logitech-powerplay",
         description:
-          "O Logitech Powerplay é um mousepad revolucionário que combina perfeitamente o mundo da tecnologia sem fio e a conveniência do carregamento sem fio. Projetado para jogadores ávidos, ele oferece um espaço de superfície generoso para movimentos precisos do mouse e integra a tecnologia de carregamento sem fio Qi, permitindo que os mouses compatíveis sejam recarregados automaticamente enquanto são usados. Com isso, os jogadores nunca mais precisam se preocupar com a bateria do mouse durante as sessões de jogo mais intensas. Além disso, seu design elegante e funcional se encaixa perfeitamente em qualquer configuração de jogo. O Logitech Powerplay é a solução definitiva para gamers que buscam desempenho impecável e comodidade.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-powerplay.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-powerplay.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-powerplay.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-powerplay.png",
+          "https://utfs.io/f/b8585eb2-bc88-4ebf-af0a-decdfb8d59fa-on5ldd.png",
+          "https://utfs.io/f/6a1b20e2-00bf-4805-acff-e51977ea131c-x3442a.png",
+          "https://utfs.io/f/0dfc4a23-6ca9-43e2-b240-d7d7d937f544-ti1f7x.png",
+          "https://utfs.io/f/041bfa51-af8d-4af8-9ec6-ca3536786ad3-l22wj0.png",
         ],
         basePrice: 950,
         categoryId: mousepadsCategory.id,
@@ -332,12 +336,12 @@ async function main() {
         name: "Logitech Desk Mat",
         slug: "logitech-desk-mat",
         description:
-          "O mousepad Logitech Desk Mat é a escolha ideal para aprimorar a sua experiência de computação. Com sua superfície suave e generosas dimensões, ele oferece um amplo espaço para movimentação precisa do mouse, garantindo um desempenho excepcional em jogos e tarefas do dia a dia. Além disso, sua base antiderrapante assegura que o mousepad permaneça firmemente no lugar, enquanto o design elegante e durável o torna uma adição sofisticada para qualquer estação de trabalho. O Logitech Desk Mat é a combinação perfeita de funcionalidade e estilo para otimizar sua produtividade e diversão.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-desk-mat.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-desk-mat.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-desk-mat.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-desk-mat.png",
+          "https://utfs.io/f/3b387596-f854-438d-85e1-faab21e83d36-n9raei.png",
+          "https://utfs.io/f/65e9ebe8-09a7-4c61-9797-08633719c1dc-1nss0n.png",
+          "https://utfs.io/f/18b56460-98b2-4676-adf3-2e772b685f6e-qlcufs.png",
+          "https://utfs.io/f/aad65548-3410-4844-8474-ba5c94643d53-ji7547.png",
         ],
         basePrice: 150,
         categoryId: mousepadsCategory.id,
@@ -347,12 +351,12 @@ async function main() {
         name: "Logitech G740",
         slug: "logitech-g740",
         description:
-          "O mousepad Logitech G740 é um acessório de alta qualidade projetado para atender às necessidades dos jogadores mais exigentes. Com uma superfície de pano de microtextura que oferece precisão e controle excepcionais, além de uma base de borracha aderente que evita deslizamentos indesejados, o G740 é ideal para aprimorar a experiência de jogo, proporcionando um desempenho suave e preciso, tornando-o um companheiro essencial para gamers em busca de vantagens competitivas.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-g740.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-g740.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-g740.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-g740.png",
+          "https://utfs.io/f/dd74b5ce-8fc4-4a59-8924-35039db43a09-culmza.png",
+          "https://utfs.io/f/5f6d9368-d639-4bca-b12c-85251d15f529-gv99k9.png",
+          "https://utfs.io/f/34529fd8-1ac4-4911-b6fb-054626051825-ofzvvc.png",
+          "https://utfs.io/f/588de6a4-d739-4502-a494-0f4f47ca3fbd-59v0o7.png",
         ],
         basePrice: 200,
         categoryId: mousepadsCategory.id,
@@ -362,12 +366,12 @@ async function main() {
         name: "Logitech Mousepad Studio Series",
         slug: "logitech-mousepad-studio-series",
         description:
-          "O mousepad Logitech Studio Series é a escolha ideal para quem busca um equilíbrio perfeito entre estilo e funcionalidade. Com um design elegante e textura de tecido premium, este mousepad não só complementa a estética do seu espaço de trabalho, mas também oferece uma superfície suave e precisa para o desempenho do seu mouse. Seja você um criativo em busca de inspiração ou um profissional em busca de produtividade, o mousepad Logitech Studio Series é a adição perfeita para aprimorar sua experiência computacional.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-studio-series.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-studio-series.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-studio-series.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-studio-series.png",
+          "https://utfs.io/f/36f714be-bd91-4786-a883-1ca459df92ea-k45quc.png",
+          "https://utfs.io/f/62df3fba-54f0-4b73-a6e3-8ce80febcf72-dcr81v.png",
+          "https://utfs.io/f/a095e6e3-e08c-42a4-a07a-0d3719d1a3d7-6lcp9e.png",
+          "https://utfs.io/f/1ff38054-13eb-408d-81e9-4bb64e467e03-61tj3.png",
         ],
         basePrice: 250,
         categoryId: mousepadsCategory.id,
@@ -377,12 +381,12 @@ async function main() {
         name: "Force One Skyhawk Dark",
         slug: "force-one-skyhawk-dark",
         description:
-          "O mousepad Force One Skyhawk Dark é um acessório de alta qualidade projetado para aprimorar sua experiência de jogo e trabalho. Com uma superfície texturizada que oferece um controle preciso do cursor e uma base antiderrapante para manter o mousepad no lugar, o Skyhawk Dark é perfeito para gamers e profissionais que exigem desempenho e durabilidade. Sua impressionante estampa temática de aviação confere um visual elegante e dinâmico à sua estação de trabalho, tornando-o uma escolha ideal para quem procura funcionalidade e estilo.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_force-dark.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_force-dark.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_force-dark.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_force-dark.png",
+          "https://utfs.io/f/72221936-9db3-4f7b-989e-68f47742b8da-x7k2s6.png",
+          "https://utfs.io/f/fa414332-d06e-4294-8cdb-0f4545d4649d-zcern9.png",
+          "https://utfs.io/f/ca56bb07-bfb9-481a-af57-3814b8e6e432-xjulgs.png",
+          "https://utfs.io/f/a2ea409c-5bea-45e9-b35e-e529ec7a8fa2-vezwlp.png",
         ],
         basePrice: 300,
         categoryId: mousepadsCategory.id,
@@ -392,12 +396,12 @@ async function main() {
         name: "Force One Skyhawk Snow",
         slug: "force-one-skyhawk-snow",
         description:
-          "O mousepad Force One Skyhawk Snow é um acessório de alta qualidade projetado para melhorar a precisão e o desempenho de seus dispositivos de entrada. Com uma superfície suave e texturizada que oferece excelente aderência e controle, o Skyhawk Snow é perfeito para gamers e profissionais que buscam uma experiência de uso mais fluida e responsiva. Seu design elegante e a estampa inspirada no universo aéreo o tornam não apenas funcional, mas também esteticamente atraente, complementando qualquer estação de trabalho ou setup de jogo.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_force-snow.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_force-snow.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_force-snow.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_force-snow.png",
+          "https://utfs.io/f/c076401e-8850-48bd-86f1-ed183473f03b-x7tx5v.png",
+          "https://utfs.io/f/c4291b68-6aea-44b1-b813-d6000d07c445-zcom0y.png",
+          "https://utfs.io/f/ffae5803-44bd-4a61-ba7e-6d2bca6749f0-xjkr33.png",
+          "https://utfs.io/f/b842e2d0-cc20-4c8e-851e-4493670841a5-veq280.png",
         ],
         basePrice: 300,
         categoryId: mousepadsCategory.id,
@@ -413,7 +417,8 @@ async function main() {
       data: {
         name: "Monitores",
         slug: "monitors",
-        imageUrl: "https://fsw-store.s3.sa-east-1.amazonaws.com/monitors.png",
+        imageUrl:
+          "https://utfs.io/f/7cbf0652-7cdc-468f-9d83-f80a9b0c2c73-11uae7.png",
       },
     });
 
@@ -422,12 +427,12 @@ async function main() {
         name: "Dell S2421HN",
         slug: "dell-s2421hn",
         description:
-          "O monitor Dell S2421HN é uma escolha excelente para quem procura uma experiência de visualização nítida e vibrante. Com uma tela de 23,8 polegadas e resolução Full HD, oferece imagens detalhadas e cores vivas. Além disso, sua tecnologia IPS garante ângulos de visão amplos e precisos, tornando-o ideal para tarefas de produtividade, entretenimento e até mesmo jogos. Com design elegante e bordas finas, o Dell S2421HN também se integra perfeitamente a qualquer ambiente de trabalho ou entretenimento.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_dell-S2421HN.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_dell-S2421HN.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_dell-S2421HN.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_dell-S2421HN.png",
+          "https://utfs.io/f/01157cd9-cd59-43ad-9b84-6fe5419aecb4-l17xro.png",
+          "https://utfs.io/f/d97cf538-043d-4cb1-814d-3d79d76ff7e2-te7tat.png",
+          "https://utfs.io/f/f6172b7c-f0b3-4f52-8d62-8cc1656bc114-x9wd56.png",
+          "https://utfs.io/f/b080961c-872e-4fb1-aaae-6b363493ead3-owwhm1.png",
         ],
         basePrice: 1500,
         categoryId: monitorsCategory.id,
@@ -437,12 +442,12 @@ async function main() {
         name: "Dell P2422H",
         slug: "dell-p2422h",
         description:
-          "O monitor Dell P2422H é uma escolha excepcional para quem busca qualidade de imagem e versatilidade. Com uma tela LED Full HD de 23,8 polegadas, proporciona imagens nítidas e cores vibrantes, tornando-o ideal para tarefas profissionais e entretenimento. Sua ampla variedade de opções de conectividade, incluindo HDMI, DisplayPort e USB, oferece flexibilidade para diferentes necessidades, enquanto recursos como a tecnologia ComfortView reduzem a fadiga visual. O design elegante e ergonômico, juntamente com a confiabilidade da marca Dell, fazem deste monitor uma escolha sólida para qualquer ambiente de trabalho.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_dell-P2422H.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_dell-P2422H.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_dell-P2422H.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_dell-P2422H.png",
+          "https://utfs.io/f/b61bd487-0e18-4f87-9153-fb8c09faab66-rax9q4.png",
+          "https://utfs.io/f/2a01b145-b299-48ae-923f-d784e1471ff6-w5lwxn.png",
+          "https://utfs.io/f/e3d6f6a4-7d88-482f-b74c-9eb1f0902571-y0thty.png",
+          "https://utfs.io/f/2667bb2f-f8ec-4126-bc22-9892f0f599ef-t64umf.png",
         ],
         basePrice: 2000,
         categoryId: monitorsCategory.id,
@@ -452,12 +457,12 @@ async function main() {
         name: "Dell P2723QE",
         slug: "dell-p2723qe",
         description:
-          "O monitor Dell P2723QE é uma excelente opção para profissionais que buscam alta qualidade de imagem e versatilidade em um único dispositivo. Com uma tela de 27 polegadas, resolução 4K e uma ampla gama de cores, este monitor oferece imagens nítidas e vibrantes, tornando-o ideal para tarefas que exigem precisão, como edição de fotos e vídeos. Além disso, sua capacidade de ajuste de altura e rotação permite um posicionamento personalizado, enquanto as diversas opções de conectividade, incluindo USB-C e HDMI, tornam a integração com outros dispositivos uma tarefa simples. Combinando desempenho e flexibilidade, o Dell P2723QE atende às necessidades de profissionais exigentes.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_dell-P2723QE.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_dell-P2723QE.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_dell-P2723QE.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_dell-P2723QE.png",
+          "https://utfs.io/f/dde7ea20-ad12-45bb-9310-008dc46897d4-60cp0c.png",
+          "https://utfs.io/f/ae7beb12-ac74-4294-9aa6-66fc702d97ab-2cn6it.png",
+          "https://utfs.io/f/0d6c9922-bdec-4369-bbf8-9f9a6368bd97-apn21y.png",
+          "https://utfs.io/f/14d925f4-b203-4063-adc1-be14f2d029c1-j2mxl3.png",
         ],
         basePrice: 2500,
         categoryId: monitorsCategory.id,
@@ -467,12 +472,12 @@ async function main() {
         name: "Dell S3422DWG",
         slug: "dell-s3422dwg",
         description:
-          "O monitor Dell S3422DWG é uma impressionante tela curva de 34 polegadas que oferece uma experiência visual imersiva e vibrante. Com resolução WQHD, proporciona imagens nítidas e detalhadas, enquanto sua taxa de atualização de 144Hz e suporte para tecnologia AMD FreeSync oferecem um desempenho suave e sem rasgos, ideal para gamers e profissionais criativos. Com uma elegante estrutura sem moldura, múltiplas opções de conectividade e uma curvatura sutil para maior conforto, este monitor Dell é a escolha perfeita para quem busca qualidade e desempenho excepcionais em um ambiente de trabalho ou entretenimento.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_dell-S3422DWG.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_dell-S3422DWG.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_dell-S3422DWG.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_dell-S3422DWG.png",
+          "https://utfs.io/f/c36e0bab-e635-4213-8f93-c48761871e80-1wl9gu.png",
+          "https://utfs.io/f/42454c14-ccec-4e7f-a8e6-cf5f67d73e26-qu5bvz.png",
+          "https://utfs.io/f/a1b5e99b-72fd-4472-887e-c563fee2e469-j9eno0.png",
+          "https://utfs.io/f/68f08f60-df7f-48a0-929c-27356559782f-5o5er5.png",
         ],
         basePrice: 3200,
         categoryId: monitorsCategory.id,
@@ -482,12 +487,12 @@ async function main() {
         name: "Dell S3222DGM",
         slug: "dell-s3222dgm",
         description:
-          "O monitor Dell S3222DGM é uma impressionante tela de 32 polegadas com resolução Quad HD que oferece uma experiência visual imersiva. Com taxas de atualização de até 165Hz e suporte para tecnologia AMD FreeSync Premium Pro, proporciona imagens nítidas e suaves em jogos e aplicações exigentes. Sua ampla curvatura de 1500R envolve o espectador, aprimorando a imersão, enquanto as opções de conectividade versáteis, incluindo HDMI, DisplayPort e USB-C, garantem a compatibilidade com uma variedade de dispositivos. O Dell S3222DGM é uma escolha atraente para gamers e profissionais que buscam qualidade visual e desempenho em um único pacote.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_dell-S3222DGM.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_dell-S3222DGM.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_dell-S3222DGM.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_dell-S3222DGM.png",
+          "https://utfs.io/f/dee01030-d114-4a76-8d85-8ad6d11d5304-yi0au.png",
+          "https://utfs.io/f/2c9c9a7a-f81c-4eb7-882e-80e45cd69044-pw22pz.png",
+          "https://utfs.io/f/87cd76a7-b385-4b68-a654-d1199ee61c5e-k7hwu0.png",
+          "https://utfs.io/f/b0d742e2-28ed-49bc-977f-b20b2de9a0bd-4q25l5.png",
         ],
         basePrice: 3500,
         categoryId: monitorsCategory.id,
@@ -497,12 +502,12 @@ async function main() {
         name: "Dell AW2524HF",
         slug: "dell-aw2524hf",
         description:
-          "O monitor Dell AW2524HF é uma impressionante tela de 25 polegadas, projetada para oferecer uma experiência de jogo imersiva e de alta qualidade. Com uma taxa de atualização de 360Hz, resolução Full HD, e a tecnologia NVIDIA G-Sync, ele proporciona imagens incrivelmente suaves e livres de distorções, tornando-o ideal para gamers que buscam precisão e desempenho. Além disso, sua estilosa estética, com iluminação RGB AlienFX personalizável, adiciona um toque de sofisticação ao seu setup de jogo. Este monitor Dell é a escolha perfeita para aqueles que desejam uma vantagem competitiva nos jogos mais exigentes.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_dell-AW2524HF.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_dell-AW2524HF.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_dell-AW2524HF.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_dell-AW2524HF.png",
+          "https://utfs.io/f/faaed1da-1d16-4839-8373-7eb813e46dc8-al6r5z.png",
+          "https://utfs.io/f/8de1bedc-06a0-47a2-9441-f49a217612ff-zid8e0.png",
+          "https://utfs.io/f/15e1f730-ed3a-4bbf-93cb-2cd9992ecfcd-akt5yv.png",
+          "https://utfs.io/f/d631cbaf-471e-40cc-be9e-7dd62a1c88bc-ecqwga.png",
         ],
         basePrice: 4200,
         categoryId: monitorsCategory.id,
@@ -518,7 +523,8 @@ async function main() {
       data: {
         name: "Speakers",
         slug: "speakers",
-        imageUrl: "https://fsw-store.s3.sa-east-1.amazonaws.com/speakers.png",
+        imageUrl:
+          "https://utfs.io/f/b73c526a-9e78-444e-8822-7cda6e857b9f-e7tkoj.png",
       },
     });
 
@@ -527,12 +533,12 @@ async function main() {
         name: "Logitech Surround Sound Z607",
         slug: "logitech-surround-sound-z607",
         description:
-          "O sistema de som Logitech Surround Sound Z607 oferece uma experiência de áudio envolvente e imersiva, ideal para entretenimento em casa. Com 160 watts de potência, esse conjunto de alto-falantes 5.1 proporciona um som nítido e vibrante, permitindo que você desfrute de filmes, música e jogos com uma qualidade sonora excepcional. Além disso, a conectividade Bluetooth e diversas opções de entrada garantem a compatibilidade com uma variedade de dispositivos, tornando o Z607 uma escolha versátil para aprimorar sua experiência audiovisual.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-surround-z607.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-surround-z607.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-surround-z607.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-surround-z607.png",
+          "https://utfs.io/f/8a4daee1-2182-4f70-8f26-43ee804de8f3-b5j8co.png",
+          "https://utfs.io/f/b49c22f5-4df5-4997-a4ff-09fb5486010b-4e4pk7.png",
+          "https://utfs.io/f/2faf574c-edc9-4814-b539-e031c20eb5b5-2d9t8a.png",
+          "https://utfs.io/f/943d92d3-8bfb-4963-8ec6-7841ac29ed96-94oc0r.png",
         ],
         basePrice: 1200,
         categoryId: speakersCategory.id,
@@ -542,12 +548,12 @@ async function main() {
         name: "Logitech Dock",
         slug: "logitech-dock",
         description:
-          "O Logitech Dock é um dispositivo versátil e elegante projetado para melhorar sua experiência de áudio e carregamento. Com conectividade Bluetooth de alta qualidade, ele permite que você transmita músicas de forma fácil a partir de dispositivos móveis ou laptops, enquanto carrega simultaneamente seu dispositivo. Com design compacto e funcional, o Logitech Dock se torna um complemento ideal para qualquer ambiente, proporcionando som nítido e conveniência de carregamento em um único dispositivo.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-dock.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-dock.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-dock.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-dock.png",
+          "https://utfs.io/f/fff82151-82d7-4618-9d0d-1fc96b5f8efb-cukwpp.png",
+          "https://utfs.io/f/2f52ea57-35f9-43f0-92e7-09fc97c008e2-gv9ztu.png",
+          "https://utfs.io/f/f03d7f00-5595-4fe2-b336-f9952d96fe24-ofz5lr.png",
+          "https://utfs.io/f/22d1ff6e-9689-439a-a8b5-a9477f80169a-59vqxs.png",
         ],
         basePrice: 4500,
         categoryId: speakersCategory.id,
@@ -557,12 +563,12 @@ async function main() {
         name: "Sony SA-Z9R Speakers",
         slug: "sony-sa-z9r-speakers",
         description:
-          "Os alto-falantes Sony SA-Z9R são um complemento essencial para quem busca uma experiência de áudio imersiva e envolvente. Projetados para funcionar em conjunto com os sistemas de som da Sony, esses alto-falantes traseiros sem fio oferecem um som cristalino e surround, levando o entretenimento doméstico a um novo patamar. Com sua fácil configuração e qualidade de áudio excepcional, os SA-Z9R Speakers proporcionam uma experiência de áudio cinematográfica no conforto de sua casa.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_sony-SA-Z9R.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_sony-SA-Z9R.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_sony-SA-Z9R.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_sony-SA-Z9R.png",
+          "https://utfs.io/f/a4d4d15c-da43-4f54-a3b9-9487c11ed4b5-o2pxdo.png",
+          "https://utfs.io/f/431b923f-b23c-4022-9881-f965407ab41b-j81a65.png",
+          "https://utfs.io/f/ffb002da-22f2-49c4-a4a1-8c7e57bc329a-edcmym.png",
+          "https://utfs.io/f/00370513-6b55-443b-b45a-fa8f95f6e29f-9inzr3.png",
         ],
         basePrice: 4000,
         categoryId: speakersCategory.id,
@@ -572,12 +578,12 @@ async function main() {
         name: "Sony XB43 Extra Bass",
         slug: "sony-xb43-extra-bass",
         description:
-          "O speaker Sony XB43 Extra Bass é a escolha perfeita para os amantes da música que buscam um som potente e envolvente em um formato portátil. Com sua tecnologia de graves aprimorados, ele oferece uma experiência sonora excepcional, proporcionando batidas profundas e vibrantes em qualquer lugar que você vá. Além disso, sua construção robusta e à prova d'água torna-o ideal para uso ao ar livre, garantindo que a festa nunca pare. Com conectividade Bluetooth e uma bateria de longa duração, o XB43 é o companheiro ideal para suas aventuras musicais.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_sony-extra-bass.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_sony-extra-bass.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_sony-extra-bass.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_sony-extra-bass.png",
+          "https://utfs.io/f/78383361-cc0b-4356-bbf3-043f21d5171d-gxgbj0.png",
+          "https://utfs.io/f/c4ab1d24-97a6-48a6-9bfb-74b6215711be-5g9sx1.png",
+          "https://utfs.io/f/204b5c37-8023-4633-99be-a95b24c34db7-rtzxd2.png",
+          "https://utfs.io/f/b5372e93-9dff-4cd5-a112-ab9d258b2856-kte061.png",
         ],
         basePrice: 3200,
         categoryId: speakersCategory.id,
@@ -587,12 +593,12 @@ async function main() {
         name: "Sony XB23 Extra Bass",
         slug: "sony-xb23-extra-bass",
         description:
-          "O alto-falante Sony XB23 Extra Bass é a escolha perfeita para quem busca um som potente e portabilidade. Com sua tecnologia de reforço de graves, ele proporciona um som nítido e envolvente, tornando qualquer festa ou momento de entretenimento uma experiência musical excepcional. Além disso, sua construção durável e à prova d'água o torna ideal para uso tanto em ambientes internos quanto ao ar livre, garantindo que a música esteja sempre presente, não importa onde você esteja.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_sony-XB23.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_sony-XB23.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_sony-XB23.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_sony-XB23.png",
+          "https://utfs.io/f/2576317e-a26b-4586-b7ad-7477031684be-f1tve5.png",
+          "https://utfs.io/f/5332ae8f-aec7-4768-9b44-7e0d8b2118a9-q9fa1g.png",
+          "https://utfs.io/f/008ea186-9d2e-4996-969e-5621d4d4016b-3gfmi3.png",
+          "https://utfs.io/f/8422af22-693c-44cb-992f-13e1f8b81cdd-x6aj1m.png",
         ],
         basePrice: 3500,
         categoryId: speakersCategory.id,
@@ -602,12 +608,12 @@ async function main() {
         name: "Sony HT-S200F Soundbar",
         slug: "sony-ht-s200f-soundbar",
         description:
-          "A Sony HT-S200F Soundbar é a solução perfeita para aprimorar a qualidade de áudio da sua experiência de entretenimento em casa. Com seu design elegante e compacto, esta soundbar oferece um som nítido e envolvente que transforma sua sala de estar em um verdadeiro cinema. Com a tecnologia Bluetooth integrada, você pode facilmente conectar dispositivos móveis para reproduzir sua música favorita, e o subwoofer sem fio proporciona graves profundos e poderosos. Além disso, as opções de conectividade versáteis e os modos de som personalizáveis garantem uma experiência sonora adaptada às suas preferências individuais. A Sony HT-S200F Soundbar é a escolha ideal para elevar sua experiência de áudio doméstico a um novo patamar.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_sony-S200F.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_sony-S200F.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_sony-S200F.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_sony-S200F.png",
+          "https://utfs.io/f/5e134cd7-e4ec-40aa-ac97-cf63d1eade52-uk14e7.png",
+          "https://utfs.io/f/3cc3ce89-2fa5-45bf-931c-818d97371287-wovt9a.png",
+          "https://utfs.io/f/a29db5cd-e7c3-44f2-938d-f90a21d993a7-ytqi4d.png",
+          "https://utfs.io/f/f3282c27-c987-4420-92cb-ce0673c154f3-y2iuzo.png",
         ],
         basePrice: 2500,
         categoryId: speakersCategory.id,
